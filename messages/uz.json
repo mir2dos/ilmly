@@ -1,0 +1,16 @@
+{
+  "HomePage": {
+    "header": {
+      "nav": {
+        "home": "Bosh sahifa",
+        "about": "Haqida",
+        "contact": "Bog'lanish"
+      }
+    },
+    "hero": {
+      "title": "Hammaga salom!",
+      "about": "Biz haqimizga borish"
+    },
+    "footer": {}
+  }
+}

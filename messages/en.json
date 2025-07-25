@@ -1,0 +1,16 @@
+{
+  "HomePage": {
+    "header": {
+      "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "contact": "Contact Us"
+      }
+    },
+    "hero": {
+      "title": "Hello world!",
+      "about": "Go to the about page"
+    },
+    "footer": {}
+  }
+}
