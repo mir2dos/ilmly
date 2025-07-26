@@ -7,87 +7,103 @@ import { Button } from "@/components/ui/button";
 import NumberFlow from "@number-flow/react";
 import { BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const PAYMENT_FREQUENCIES: ("monthly" | "yearly")[] = ["monthly", "yearly"];
-const TIERS = [
-  {
-    id: "basic",
-    name: "Basic",
-    price: {
-      monthly: 20,
-      yearly: 15,
-    },
-    description: "Up to 100 students",
-    features: [
-      "Free email alerts",
-      "3-minute checks",
-      "Automatic data enrichment",
-      "10 monitors",
-      "Up to 3 seats",
-    ],
-    cta: "Get started",
-  },
-  {
-    id: "pro",
-    name: "Pro",
-    price: {
-      monthly: 50,
-      yearly: 40,
-    },
-    description: "For 100 - 500 students",
-    features: [
-      "Unlimited phone calls",
-      "30 second checks",
-      "Single-user account",
-      "20 monitors",
-      "Up to 6 seats",
-    ],
-    cta: "Get started",
-    popular: true,
-  },
-  {
-    id: "premium",
-    name: "Premium",
-    price: {
-      monthly: 90,
-      yearly: 80,
-    },
-    description: "For 500 - 1000 students",
-    features: [
-      "Unlimited phone calls",
-      "15 second checks",
-      "Single-user account",
-      "50 monitors",
-      "Up to 10 seats",
-    ],
-    cta: "Get started",
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise",
-    price: {
-      monthly: "Custom",
-      yearly: "Custom",
-    },
-    description: "For 1000+ students",
-    features: [
-      "Everything in Organizations",
-      "Up to 5 team members",
-      "100 monitors",
-      "15 status pages",
-      "200+ integrations",
-    ],
-    cta: "Contact Us",
-    highlighted: true,
-  },
-];
+
+type TIER_TYPE = {
+  id: string;
+  name: string;
+  description: string;
+  price: {
+    monthly: number | string;
+    yearly: number | string;
+  };
+  features: string[];
+  cta: string;
+  popular?: boolean;
+  highlighted?: boolean;
+};
+
+// const TIERS = [
+//   {
+//     id: "basic",
+//     name: "Basic",
+//     price: {
+//       monthly: 20,
+//       yearly: 15,
+//     },
+//     description: "Up to 100 students",
+//     features: [
+//       "Free email alerts",
+//       "3-minute checks",
+//       "Automatic data enrichment",
+//       "10 monitors",
+//       "Up to 3 seats",
+//     ],
+//     cta: "Get started",
+//   },
+//   {
+//     id: "pro",
+//     name: "Pro",
+//     price: {
+//       monthly: 50,
+//       yearly: 40,
+//     },
+//     description: "For 100 - 500 students",
+//     features: [
+//       "Unlimited phone calls",
+//       "30 second checks",
+//       "Single-user account",
+//       "20 monitors",
+//       "Up to 6 seats",
+//     ],
+//     cta: "Get started",
+//     popular: true,
+//   },
+//   {
+//     id: "premium",
+//     name: "Premium",
+//     price: {
+//       monthly: 90,
+//       yearly: 80,
+//     },
+//     description: "For 500 - 1000 students",
+//     features: [
+//       "Unlimited phone calls",
+//       "15 second checks",
+//       "Single-user account",
+//       "50 monitors",
+//       "Up to 10 seats",
+//     ],
+//     cta: "Get started",
+//   },
+//   {
+//     id: "enterprise",
+//     name: "Enterprise",
+//     price: {
+//       monthly: "Custom",
+//       yearly: "Custom",
+//     },
+//     description: "For 1000+ students",
+//     features: [
+//       "Everything in Organizations",
+//       "Up to 5 team members",
+//       "100 monitors",
+//       "15 status pages",
+//       "200+ integrations",
+//     ],
+//     cta: "Contact Us",
+//     highlighted: true,
+//   },
+// ];
 
 const HighlightedBackground = () => (
   <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] bg-[size:45px_45px] opacity-100" />
 );
 
 const PopularBackground = () => (
-  <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(123, 119, 240, 0.1),rgba(255,255,255,0))] " />
+  <div className="bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(123, 119, 240, 0.1),rgba(255,255,255,0))] absolute inset-0" />
 );
 
 const Tab = ({
@@ -106,7 +122,7 @@ const Tab = ({
       onClick={() => setSelected(text)}
       className={cn(
         "text-foreground relative w-fit px-4 py-2 text-sm font-semibold capitalize transition-colors",
-        discount && "flex items-center justify-center gap-2.5"
+        discount && "flex items-center justify-center gap-2.5",
       )}
     >
       <span className="relative z-10">{text}</span>
@@ -123,7 +139,7 @@ const Tab = ({
             "relative z-10 bg-gray-100 text-xs whitespace-nowrap text-black shadow-none hover:bg-gray-100",
             selected
               ? "bg-[#F3F4F6] hover:bg-[#F3F4F6]"
-              : "bg-gray-300 hover:bg-gray-300"
+              : "bg-gray-300 hover:bg-gray-300",
           )}
         >
           Save 35%
@@ -137,7 +153,7 @@ const PricingCard = ({
   tier,
   paymentFrequency,
 }: {
-  tier: (typeof TIERS)[0];
+  tier: TIER_TYPE[][0];
   paymentFrequency: keyof typeof tier.price;
 }) => {
   const price = tier.price[paymentFrequency];
@@ -151,7 +167,7 @@ const PricingCard = ({
         isHighlighted
           ? "bg-foreground text-background"
           : "bg-background text-foreground",
-        isPopular && "outline outline-[#638aeb]"
+        isPopular && "outline outline-[#638aeb]",
       )}
     >
       {isHighlighted && <HighlightedBackground />}
@@ -178,7 +194,7 @@ const PricingCard = ({
               value={price}
               className="text-4xl font-medium"
             />
-            <p className="-mt-2 text-xs font-medium">Per month/user</p>
+            <p className="-mt-2 text-xs font-medium">Per month</p>
           </>
         ) : (
           <h1 className="text-4xl font-medium">{price}</h1>
@@ -193,7 +209,7 @@ const PricingCard = ({
               key={index}
               className={cn(
                 "flex items-center gap-2 text-sm font-medium",
-                isHighlighted ? "text-background" : "text-foreground/60"
+                isHighlighted ? "text-background" : "text-foreground/60",
               )}
             >
               <BadgeCheck strokeWidth={1} size={16} />
@@ -206,7 +222,7 @@ const PricingCard = ({
       <Button
         className={cn(
           "h-fit w-full rounded-lg",
-          isHighlighted && "bg-accent text-foreground hover:bg-accent/95"
+          isHighlighted && "bg-accent text-foreground hover:bg-accent/95",
         )}
       >
         {tier.cta}
@@ -216,21 +232,21 @@ const PricingCard = ({
 };
 
 export default function Pricing() {
+  const t = useTranslations("HomePage.PricingSection");
   const [selectedPaymentFreq, setSelectedPaymentFreq] = useState<
     "monthly" | "yearly"
   >(PAYMENT_FREQUENCIES[0]);
+
+  const TIERS = t.raw("tiers") as Array<TIER_TYPE>;
 
   return (
     <section className="flex flex-col items-center gap-10 py-10">
       <div className="space-y-7 text-center">
         <div className="space-y-4">
           <h1 className="text-4xl font-medium md:text-5xl">
-            Plans and Pricing
+            {t("sectionTitle")}
           </h1>
-          <p>
-            Receive unlimited credits when you pay yearly, and save on your
-            plan.
-          </p>
+          <p>{t("sectionDesc")}</p>
         </div>
         <div className="mx-auto flex w-fit rounded-full bg-[#F3F4F6] p-1 dark:bg-[#222]">
           {PAYMENT_FREQUENCIES.map((freq) => (

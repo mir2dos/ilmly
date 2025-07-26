@@ -1,6 +1,6 @@
 # Ilmly
 
-All‑in‑one management platform for  private learning centers in Uzbekistan
+All‑in‑one management platform for private learning centers in Uzbekistan
 
 ## Tools used
 

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 // import {
 //   Select,
 //   SelectContent,
@@ -17,17 +18,18 @@ interface NavItem {
   href: string;
 }
 
-const navItems: NavItem[] = [
-  { name: "Home", href: "/" },
-  { name: "Features", href: "/features" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
-
 export default function Header() {
+  const t = useTranslations("HomePage.Header");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
+  const navItems: NavItem[] = [
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.features"), href: "/features" },
+    { name: t("nav.pricing"), href: "/pricing" },
+    { name: t("nav.about"), href: "/about" },
+    { name: t("nav.contact"), href: "/contact" },
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,7 +76,7 @@ export default function Header() {
   return (
     <>
       <motion.header
-        className={`transition-all duration-500 bg-transparent`}
+        className={`bg-transparent transition-all duration-500`}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -153,7 +155,7 @@ export default function Header() {
                 href="/login"
                 className="text-foreground/80 hover:text-foreground px-4 py-2 text-sm font-medium transition-colors duration-200"
               >
-                Sign In
+                {t("signIn")}
               </Link>
 
               <motion.div
@@ -164,7 +166,7 @@ export default function Header() {
                   href="/signup"
                   className="bg-foreground text-background hover:bg-foreground/90 inline-flex items-center space-x-2 rounded-lg px-5 py-2.5 text-sm font-medium shadow-sm transition-all duration-200"
                 >
-                  <span>Get Started</span>
+                  <span>{t("getStarted")}</span>
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </motion.div>

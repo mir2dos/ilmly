@@ -13,11 +13,13 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/ui/phone-mockup";
 import { useTheme } from "next-themes";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
+  const t = useTranslations("HomePage.HeroSection");
   const heroRef = useRef<HTMLDivElement>(null);
   const mockupRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(heroRef, { once: false, amount: 0.3 });
@@ -41,23 +43,6 @@ export default function Hero() {
       controls.start("visible");
     }
   }, [isInView, controls]);
-
-  const GradientText = ({
-    children,
-    className,
-  }: {
-    children: React.ReactNode;
-    className?: string;
-  }) => (
-    <span
-      className={cn(
-        "from-primary dark:from-primary bg-gradient-to-r via-blue-700 to-blue-300 bg-clip-text text-transparent dark:via-blue-300 dark:to-blue-400",
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
 
   return (
     <div
@@ -90,11 +75,23 @@ export default function Hero() {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
+              className="shadow-chart-3 text-foreground relative mb-4 flex w-fit items-center gap-2 rounded-full border-1 border-blue-500 bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-1.5 text-sm font-medium shadow-sm"
             >
-              <h2 className="text-foreground mb-6 text-4xl leading-tight font-bold tracking-tight md:text-5xl lg:text-6xl">
-                LU-cy bridges <GradientText>Web3</GradientText> and{" "}
-                <GradientText>AI</GradientText> platforms for dev teams
-              </h2>
+              <Sparkles size={18} color="blue" />
+              <p
+                dangerouslySetInnerHTML={{ __html: t.raw("eyebrowHeadline") }}
+              />
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <h2
+                className="text-foreground mb-6 text-4xl leading-tight font-bold tracking-tight md:text-5xl lg:text-6xl"
+                dangerouslySetInnerHTML={{ __html: t.raw("sectionTitle") }}
+              />
             </motion.div>
 
             <motion.p
@@ -104,12 +101,7 @@ export default function Hero() {
               }}
               className="text-muted-foreground mb-8 text-lg leading-relaxed"
             >
-              The future is a blend of intelligence and decentralization. LU-cy
-              connects AI tools with Web3 infrastructure, giving developers the
-              power to build beyond limits. One platform.{" "}
-              <span className="text-foreground font-semibold">
-                Endless potential.
-              </span>
+              {t("sectionDesc")}
             </motion.p>
 
             <motion.div
@@ -125,7 +117,7 @@ export default function Hero() {
                 className="relative"
               >
                 <Button className="relative rounded-full">
-                  Explore
+                  {t("ctaPrimary")}
                   <Sparkles className="h-4 w-4" />
                 </Button>
               </motion.div>
@@ -140,31 +132,9 @@ export default function Hero() {
                   variant="outline"
                   className="border-primary/20 hover:border-primary/30 hover:bg-primary/5 rounded-full backdrop-blur-sm transition-all duration-300"
                 >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  {t("ctaSecondary")} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </motion.div>
-            </motion.div>
-
-            <motion.div
-              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-              className="mt-10 flex flex-wrap justify-center gap-3 md:justify-start"
-            >
-              {["Web3 Ready", "AI Powered", "Developer First"].map(
-                (feature, index) => (
-                  <motion.div
-                    key={feature}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 + index * 0.1 }}
-                    className="text-foreground relative rounded-full px-4 py-1.5 text-sm font-medium shadow-sm"
-                  >
-                    <div className="border-primary/10 bg-background/80 dark:bg-background/30 absolute inset-0 rounded-full border backdrop-blur-md dark:border-white/5"></div>
-                    <div className="via-primary/20 dark:via-primary/30 absolute bottom-0 left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-rose-500/0 to-rose-500/0 dark:from-blue-500/0 dark:to-indigo-500/0"></div>
-
-                    <span className="relative z-10">{feature}</span>
-                  </motion.div>
-                )
-              )}
             </motion.div>
           </motion.div>
 

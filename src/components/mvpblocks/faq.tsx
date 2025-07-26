@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { useTranslations } from "next-intl";
 
 interface FAQItemProps {
   question: string;
@@ -27,7 +28,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
       className={cn(
         "group border-border/60 rounded-lg border",
         "transition-all duration-200 ease-in-out",
-        isOpen ? "bg-card/30 shadow-sm" : "hover:bg-card/50"
+        isOpen ? "bg-card/30 shadow-sm" : "hover:bg-card/50",
       )}
     >
       <button
@@ -39,7 +40,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
           className={cn(
             "text-left text-base font-medium transition-colors duration-200",
             "text-foreground/80",
-            isOpen && "text-foreground"
+            isOpen && "text-foreground",
           )}
         >
           {question}
@@ -56,7 +57,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
           className={cn(
             "shrink-0 rounded-full p-0.5",
             "transition-colors duration-200",
-            isOpen ? "text-primary" : "text-muted-foreground"
+            isOpen ? "text-primary" : "text-muted-foreground",
           )}
         >
           <ChevronDown className="h-4 w-4" />
@@ -116,33 +117,8 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 }
 
 export default function Faq() {
-  const faqs: Omit<FAQItemProps, "index">[] = [
-    {
-      question: "What makes MVPBlocks unique?",
-      answer:
-        "MVPBlocks stands out through its intuitive design, powerful component library, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features, all while maintaining excellent performance and accessibility.",
-    },
-    {
-      question: "How can I customize the components?",
-      answer:
-        "All components are built with Tailwind CSS, making them highly customizable. You can modify colors, spacing, typography, and more by simply adjusting the class names or using our theme variables to match your brand identity.",
-    },
-    {
-      question: "Do the components work with dark mode?",
-      answer:
-        "Yes, all MVPBlocks components are designed to work seamlessly with both light and dark modes. They automatically adapt to your site's theme settings, providing a consistent user experience regardless of the user's preference.",
-    },
-    {
-      question: "How can I get started with MVPBlocks?",
-      answer:
-        "You can get started by browsing our component library and copying the code for the components you need. Our documentation provides clear instructions for installation and usage, and you can always reach out to our support team if you need assistance.",
-    },
-    {
-      question: "Can I use MVPBlocks for commercial projects?",
-      answer:
-        "Absolutely! MVPBlocks is free to use for both personal and commercial projects. There are no licensing fees or attribution requirements—just build and launch your MVP faster than ever before.",
-    },
-  ];
+  const t = useTranslations("HomePage.FAQSection");
+  const faqs = t.raw("faqs") as Omit<FAQItemProps, "index">[];
 
   return (
     <section className="bg-background relative w-full overflow-hidden py-16">
@@ -164,12 +140,10 @@ export default function Faq() {
             FAQs
           </Badge>
 
-          <h2 className="from-primary mb-3 bg-gradient-to-r to-rose-400 bg-clip-text text-3xl font-bold text-transparent">
-            Frequently Asked Questions
+          <h2 className="gradient-text text-3xl font-bold">
+            {t("sectionTitle")}
           </h2>
-          <p className="text-muted-foreground text-sm">
-            Everything you need to know about MVPBlocks
-          </p>
+          <p className="text-muted-foreground text-sm">{t("sectionDesc")}</p>
         </motion.div>
 
         <div className="mx-auto max-w-2xl space-y-2">

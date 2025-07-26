@@ -1,15 +1,154 @@
 {
   "HomePage": {
-    "header": {
+    "Header": {
       "nav": {
         "home": "Bosh sahifa",
-        "about": "Haqida",
-        "contact": "Bog'lanish"
-      }
+        "features": "Xususiyatlar",
+        "pricing": "Narxlar",
+        "about": "Biz haqimizda",
+        "contact": "Aloqa"
+      },
+      "signIn": "Kirish",
+      "getStarted": "Boshlash"
     },
-    "hero": {
-      "title": "Hammaga salom!",
-      "about": "Biz haqimizga borish"
+    "HeroSection": {
+      "sectionTitle": "LU-cy dev jamoalari uchun <span class='gradient-text'>Web3</span> va <span class='gradient-text'>AI</span> platformalarini bog'laydi",
+      "sectionDesc": "Kelajak aql va markazsizlashtirish uyg'unligidir. LU-cy AI vositalarini Web3 infratuzilmasi bilan bog'lab, dasturchilarga cheksiz imkoniyatlar yaratish kuchini beradi. Bitta platforma.",
+      "eyebrowHeadline": "Kutish ro'yxatimizga qo'shiling va MVP ishga tushirilganda <strong>30% chegirmaga</strong> ega bo'ling.",
+      "ctaPrimary": "Kashf qilish",
+      "ctaSecondary": "Ko'proq ma'lumot olish"
+    },
+    "FeaturesSection": {
+      "sectionTitle": "Keling, sizning MVP'ingizni qurishga yordam beramiz",
+      "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "features": [
+        {
+          "title": "Dasturchilar uchun qulay",
+          "desc": "Minimal ortiqcha yuklama va maksimal moslashuvchanlik bilan dasturchilar uchun tezkor yaratish va takrorlashga moslashtirilgan."
+        },
+        {
+          "title": "CLI qo'llab-quvvatlash",
+          "desc": "Uzliksiz rivojlanish va ish jarayonini integratsiyalash uchun buyruq qatori interfeysini qo'llab-quvvatlash."
+        },
+        {
+          "title": "Oson sozlanadigan",
+          "desc": "Har bir blok tahrirlanadigan qilib qurilgan. Layout'dan tortib mantiqqa, uslubdan tortib tuzilishgacha — o'zingizga moslashtiring."
+        },
+        {
+          "title": "v0 qo'llab-quvvatlash",
+          "desc": "Ishonch bilan tez ishga tushiring. MVPlar, prototiplar va dam olish kunlari loyihalari uchun a'lo darajada."
+        },
+        {
+          "title": "To'liq hujjatlar",
+          "desc": "Har bir xususiyatni tushunish va tajribangizni maksimal darajada oshirish uchun keng qamrovli hujjatlar."
+        },
+        {
+          "title": "O'zingiznikini qo'shing",
+          "desc": "Kutubxonaga o'zingizning bloklaringizni qo'shing va Ilmly hamjamiyatining bir qismiga aylaning."
+        }
+      ]
+    },
+    "PricingSection": {
+      "sectionTitle": "Rejalar va Narxlar",
+      "sectionDesc": "Yillik to'lov qilsangiz, cheksiz kreditlar oling va rejangizda tejang.",
+      "tiers": [
+        {
+          "id": "basic",
+          "name": "Asosiy",
+          "description": "100 tagacha talaba",
+          "price": {
+            "monthly": 20,
+            "yearly": 15
+          },
+          "features": [
+            "Bepul elektron pochta bildirishnomalari",
+            "3 daqiqalik tekshiruvlar",
+            "Avtomatik ma'lumotlarni boyitish",
+            "10 ta monitor",
+            "3 tagacha o'rin"
+          ],
+          "cta": "Boshlash"
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "description": "100 - 500 talaba uchun",
+          "price": {
+            "monthly": 50,
+            "yearly": 40
+          },
+          "features": [
+            "Cheksiz telefon qo'ng'iroqlari",
+            "30 soniyalik tekshiruvlar",
+            "Yagona foydalanuvchi hisobi",
+            "20 ta monitor",
+            "6 tagacha o'rin"
+          ],
+          "cta": "Boshlash",
+          "popular": true
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "description": "500 - 1000 talaba uchun",
+          "price": {
+            "monthly": 90,
+            "yearly": 80
+          },
+          "features": [
+            "Cheksiz telefon qo'ng'iroqlari",
+            "15 soniyalik tekshiruvlar",
+            "Yagona foydalanuvchi hisobi",
+            "50 ta monitor",
+            "10 tagacha o'rin"
+          ],
+          "cta": "Boshlash"
+        },
+        {
+          "id": "enterprise",
+          "name": "Korporativ",
+          "description": "1000+ talaba uchun",
+          "price": {
+            "monthly": "Maxsus",
+            "yearly": "Maxsus"
+          },
+          "features": [
+            "Tashkilotlardagi hamma narsa",
+            "5 tagacha jamoa a'zosi",
+            "100 ta monitor",
+            "15 ta holat sahifasi",
+            "200+ integratsiyalar"
+          ],
+          "cta": "Biz bilan bog'lanish",
+          "highlighted": true
+        }
+      ]
+    },
+    "FAQSection": {
+      "sectionTitle": "Tez-tez beriladigan savollar",
+      "sectionDesc": "Ilmly haqida bilishingiz kerak bo'lgan hamma narsa",
+      "faqs": [
+        {
+          "question": "Ilmly'ni nima noyob qiladi?",
+          "answer": "Ilmly o'zining intuitiv dizayni, kuchli komponentlar kutubxonasi va uzluksiz integratsiya imkoniyatlari bilan ajralib turadi. Biz soddalikni ilg'or xususiyatlar bilan birlashtirgan, ayni paytda ajoyib ishlash va foydalanish imkoniyatini saqlab qolgan foydalanuvchi tajribasini yaratishga e'tibor qaratdik."
+        },
+        {
+          "question": "Komponentlarni qanday sozlashim mumkin?",
+          "answer": "Barcha komponentlar Tailwind CSS bilan qurilgan bo'lib, ular juda moslashuvchan. Ranglar, bo'shliqlar, tipografiya va boshqalarni sinf nomlarini sozlash yoki brendingizga mos keladigan mavzu o'zgaruvchilarimizdan foydalanish orqali o'zgartirishingiz mumkin."
+        },
+        {
+          "question": "Komponentlar qorong'u rejimda ishlaydimi?",
+          "answer": "Ha, barcha Ilmly komponentlari yorug'lik va qorong'u rejimlar bilan uzluksiz ishlash uchun mo'ljallangan. Ular foydalanuvchining xohishidan qat'i nazar, izchil foydalanuvchi tajribasini ta'minlab, saytingizning mavzu sozlamalariga avtomatik ravishda moslashadi."
+        },
+        {
+          "question": "Ilmly bilan qanday boshlashim mumkin?",
+          "answer": "Komponentlar kutubxonamizni ko'rib chiqish va sizga kerak bo'lgan komponentlar uchun kodni nusxalash orqali boshlashingiz mumkin. Hujjatlarimiz o'rnatish va foydalanish bo'yicha aniq ko'rsatmalar beradi va agar sizga yordam kerak bo'lsa, har doim bizning qo'llab-quvvatlash jamoamizga murojaat qilishingiz mumkin."
+        },
+        {
+          "question": "Ilmly'ni tijorat loyihalari uchun ishlatsam bo'ladimi?",
+          "answer": "Albatta! Ilmly shaxsiy va tijorat loyihalari uchun bepul. Litsenziya to'lovlari yoki atrof-muhit talablari yo'q — shunchaki MVP'ingizni har qachongidan ham tezroq yarating va ishga tushiring."
+        }
+      ]
     },
     "footer": {}
   }
