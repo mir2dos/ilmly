@@ -19,6 +19,7 @@
       "ctaSecondary": "Learn More"
     },
     "FeaturesSection": {
+      "sectionBadge": "Features",
       "sectionTitle": "Let’s help build your MVP",
       "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
       "features": [
@@ -49,6 +50,7 @@
       ]
     },
     "PricingSection": {
+      "sectionBadge": "Plans",
       "sectionTitle": "Plans and Pricing",
       "sectionDesc": "Receive unlimited credits when you pay yearly, and save on your plan.",
       "tiers": [
@@ -125,6 +127,7 @@
       ]
     },
     "FAQSection": {
+      "sectionBadge": "FAQs",
       "sectionTitle": "Frequently Asked Questions",
       "sectionDesc": "Everything you need to know about Ilmly",
       "faqs": [
@@ -150,6 +153,15 @@
         }
       ]
     },
-    "footer": {}
+    "ContactSection": {
+      "sectionBadge": "Contact",
+      "sectionTitle": "Contact Us",
+      "sectionDesc": "We'll reach out to you in less than 24 hours."
+    },
+    "Footer": {}
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, uz {🇺🇿 Uzbek} en {🇺🇸 English} other {Unknown}}"
   }
 }

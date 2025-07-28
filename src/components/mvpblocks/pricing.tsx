@@ -8,6 +8,7 @@ import NumberFlow from "@number-flow/react";
 import { BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import SectionHeader from "../SectionHeader";
 
 const PAYMENT_FREQUENCIES: ("monthly" | "yearly")[] = ["monthly", "yearly"];
 
@@ -173,14 +174,14 @@ const PricingCard = ({
       {isHighlighted && <HighlightedBackground />}
       {isPopular && <PopularBackground />}
 
-      <h2 className="flex items-center gap-3 text-xl font-medium capitalize">
+      <h3 className="flex items-center gap-3 text-xl font-medium capitalize">
         {tier.name}
         {isPopular && (
           <Badge className="mt-1 bg-blue-900 px-1 py-0 text-white">
             🔥 Most Popular
           </Badge>
         )}
-      </h2>
+      </h3>
 
       <div className="relative h-12">
         {typeof price === "number" ? (
@@ -202,7 +203,7 @@ const PricingCard = ({
       </div>
 
       <div className="flex-1 space-y-2">
-        <h3 className="text-sm font-medium">{tier.description}</h3>
+        <h4 className="text-sm font-medium">{tier.description}</h4>
         <ul className="space-y-2">
           {tier.features.map((feature, index) => (
             <li
@@ -242,12 +243,11 @@ export default function Pricing() {
   return (
     <section className="flex flex-col items-center gap-10 py-10">
       <div className="space-y-7 text-center">
-        <div className="space-y-4">
-          <h1 className="text-4xl font-medium md:text-5xl">
-            {t("sectionTitle")}
-          </h1>
-          <p>{t("sectionDesc")}</p>
-        </div>
+        <SectionHeader
+          badge={t("sectionBadge")}
+          title={t("sectionTitle")}
+          subtitle={t("sectionDesc")}
+        />
         <div className="mx-auto flex w-fit rounded-full bg-[#F3F4F6] p-1 dark:bg-[#222]">
           {PAYMENT_FREQUENCIES.map((freq) => (
             <Tab

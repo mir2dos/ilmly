@@ -6,6 +6,7 @@ import { ChevronDown, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { useTranslations } from "next-intl";
+import SectionHeader from "../SectionHeader";
 
 interface FAQItemProps {
   question: string;
@@ -127,24 +128,11 @@ export default function Faq() {
       <div className="bg-primary/5 absolute -right-20 bottom-20 h-64 w-64 rounded-full blur-3xl" />
 
       <div className="relative container mx-auto max-w-6xl px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto mb-12 max-w-2xl text-center"
-        >
-          <Badge
-            variant="outline"
-            className="border-primary mb-4 px-3 py-1 text-xs font-medium tracking-wider uppercase"
-          >
-            FAQs
-          </Badge>
-
-          <h2 className="gradient-text text-3xl font-bold">
-            {t("sectionTitle")}
-          </h2>
-          <p className="text-muted-foreground text-sm">{t("sectionDesc")}</p>
-        </motion.div>
+        <SectionHeader
+          badge={t("sectionBadge")}
+          title={t("sectionTitle")}
+          subtitle={t("sectionDesc")}
+        />
 
         <div className="mx-auto max-w-2xl space-y-2">
           {faqs.map((faq, index) => (

@@ -7,6 +7,7 @@ import {
   PlusCircle,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import SectionHeader from "../SectionHeader";
 
 export default function Features() {
   const t = useTranslations("HomePage.FeaturesSection");
@@ -48,17 +49,11 @@ export default function Features() {
   return (
     <section className="relative py-14">
       <div className="container">
-        <div className="relative mx-auto max-w-2xl sm:text-center">
-          <div className="relative z-10">
-            <h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter sm:text-4xl md:text-5xl">
-              {t("sectionTitle")}
-            </h3>
-            <p className="font-geist text-foreground/60 mt-3">
-              {t("sectionDesc")}
-            </p>
-          </div>
-        </div>
-        <hr className="bg-foreground/30 mx-auto mt-5 h-px w-1/2" />
+        <SectionHeader
+          badge={t("sectionBadge")}
+          title={t("sectionTitle")}
+          subtitle={t("sectionDesc")}
+        />
         <div className="relative mt-12">
           <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item, idx) =>

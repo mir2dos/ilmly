@@ -5,6 +5,7 @@ import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import LocaleSwitcher from "../LocaleSwitcher";
 // import {
 //   Select,
 //   SelectContent,
@@ -133,23 +134,7 @@ export default function Header() {
               className="hidden items-center space-x-3 lg:flex"
               variants={itemVariants}
             >
-              {/* <motion.button
-                className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-lg p-2 transition-colors duration-200"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Languages className="h-5 w-5" />
-              </motion.button> */}
-
-              {/* <Select>
-                <SelectTrigger className="w-[130px]">
-                  <SelectValue placeholder="Language" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="uzbek">Uzbek</SelectItem>
-                  <SelectItem value="english">English</SelectItem>
-                </SelectContent>
-              </Select> */}
+              <LocaleSwitcher />
 
               <Link
                 href="/login"

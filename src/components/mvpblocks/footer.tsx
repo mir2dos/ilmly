@@ -42,7 +42,7 @@ const data = {
     name: "Mvpblocks",
     description:
       "Building beautiful and functional web experiences with modern technologies. We help startups and businesses create their digital presence.",
-    logo: "/logo-1.svg",
+    logo: "/logo-4.svg",
   },
 };
 
@@ -90,11 +90,8 @@ export default function Footer() {
               <img
                 src={data.company.logo || "/placeholder.svg"}
                 alt="logo"
-                className="h-8 w-8 rounded-full"
+                className="h-20 rounded-full"
               />
-              <span className="text-2xl font-semibold">
-                {data.company.name}
-              </span>
             </div>
 
             <p className="text-foreground/50 mt-6 max-w-md text-center leading-relaxed sm:max-w-xs sm:text-left">

@@ -7,6 +7,7 @@ import Pricing from "@/components/mvpblocks/pricing";
 import Faq from "@/components/mvpblocks/faq";
 import Hero from "@/components/mvpblocks/hero";
 import Footer from "@/components/mvpblocks/footer";
+import Contact from "@/components/mvpblocks/contact";
 
 export default function HomePage() {
   // const t = useTranslations("HomePage");
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Features />
       <Pricing />
       <Faq />
+      <Contact />
       <Footer />
       {/* <h1>{t("hero.title")}</h1>
       <Link href="/about">{t("hero.about")}</Link>

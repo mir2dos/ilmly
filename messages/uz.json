@@ -14,11 +14,12 @@
     "HeroSection": {
       "sectionTitle": "LU-cy dev jamoalari uchun <span class='gradient-text'>Web3</span> va <span class='gradient-text'>AI</span> platformalarini bog'laydi",
       "sectionDesc": "Kelajak aql va markazsizlashtirish uyg'unligidir. LU-cy AI vositalarini Web3 infratuzilmasi bilan bog'lab, dasturchilarga cheksiz imkoniyatlar yaratish kuchini beradi. Bitta platforma.",
-      "eyebrowHeadline": "Kutish ro'yxatimizga qo'shiling va MVP ishga tushirilganda <strong>30% chegirmaga</strong> ega bo'ling.",
+      "eyebrowHeadline": "Kutish ro'yxatimizga qo'shiling va <strong>30% chegirmaga</strong> ega bo'ling.",
       "ctaPrimary": "Kashf qilish",
       "ctaSecondary": "Ko'proq ma'lumot olish"
     },
     "FeaturesSection": {
+      "sectionBadge": "Xususiyatlar",
       "sectionTitle": "Keling, sizning MVP'ingizni qurishga yordam beramiz",
       "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
       "features": [
@@ -49,6 +50,7 @@
       ]
     },
     "PricingSection": {
+      "sectionBadge": "Narxlar",
       "sectionTitle": "Rejalar va Narxlar",
       "sectionDesc": "Yillik to'lov qilsangiz, cheksiz kreditlar oling va rejangizda tejang.",
       "tiers": [
@@ -125,6 +127,7 @@
       ]
     },
     "FAQSection": {
+      "sectionBadge": "Savollar",
       "sectionTitle": "Tez-tez beriladigan savollar",
       "sectionDesc": "Ilmly haqida bilishingiz kerak bo'lgan hamma narsa",
       "faqs": [
@@ -150,6 +153,15 @@
         }
       ]
     },
-    "footer": {}
+    "ContactSection": {
+      "sectionBadge": "Aloqa",
+      "sectionTitle": "Aloqaga chiqing",
+      "sectionDesc": "24 soatdan kamroq vaqt ichida siz bilan bog'lanamiz."
+    },
+    "Footer": {}
+  },
+  "LocaleSwitcher": {
+    "label": "Tilni tanlang",
+    "locale": "{locale, select, uz {🇺🇿 Uzbek} en {🇺🇸 English} other {Nomalum}}"
   }
 }
