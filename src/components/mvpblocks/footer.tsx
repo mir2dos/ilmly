@@ -8,6 +8,7 @@ import {
   Phone,
   Twitter,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const data = {
@@ -87,7 +88,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="text-primary flex justify-center gap-2 sm:justify-start">
-              <img
+              <Image
                 src={data.company.logo || "/placeholder.svg"}
                 alt="logo"
                 className="h-20 rounded-full"

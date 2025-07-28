@@ -98,7 +98,7 @@ export default function Header() {
             </motion.div>
 
             <nav className="hidden items-center space-x-1 lg:flex">
-              {navItems.map((item, index) => (
+              {navItems.map((item) => (
                 <motion.div
                   key={item.name}
                   variants={itemVariants}

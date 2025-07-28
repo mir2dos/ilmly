@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   motion,
   useAnimation,
@@ -9,16 +9,12 @@ import {
   useTransform,
   useMotionValue,
 } from "framer-motion";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import PhoneMockup from "@/components/ui/phone-mockup";
-import { useTheme } from "next-themes";
-import { ArrowRight, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
-  const { theme } = useTheme();
-  const isDark = theme === "dark";
   const t = useTranslations("HomePage.HeroSection");
   const heroRef = useRef<HTMLDivElement>(null);
   const mockupRef = useRef<HTMLDivElement>(null);
@@ -29,7 +25,6 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 50]);
 
   const mouseX = useMotionValue(0);

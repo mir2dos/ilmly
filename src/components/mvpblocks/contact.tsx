@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Check, Loader2 } from "lucide-react";
 import SectionHeader from "../SectionHeader";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -170,7 +171,7 @@ export default function Contact() {
               className="relative my-8 flex h-full w-full items-center justify-center overflow-hidden pr-8"
             >
               <article className="min-h- relative mx-auto h-[350px] overflow-hidden">
-                <img src="/laptop-mockup.webp" alt="" />
+                <Image src="/laptop-mockup.webp" alt="Laptop mockup" />
               </article>
             </motion.div>
           </div>
