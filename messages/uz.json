@@ -158,7 +158,31 @@
       "sectionTitle": "Aloqaga chiqing",
       "sectionDesc": "24 soatdan kamroq vaqt ichida siz bilan bog'lanamiz."
     },
-    "Footer": {}
+    "Footer": {
+      "companyName": "Ilmly",
+      "companyDesc": "O‘zbekistondagi xususiy o‘quv markazlari uchun barchasi bir joyda boshqaruv platformasi.",
+      "companyLinks": {
+        "title": "Kompaniya",
+        "about": "Biz haqimizda",
+        "partners": "Hamkorlar",
+        "news": "Yangiliklar",
+        "pricing": "Narxlar",
+        "contact": "Aloqa"
+      },
+      "resourcesLinks": {
+        "title": "Resurslar",
+        "guides": "Qo‘llanmalar",
+        "demo": "Demo videolar",
+        "centers": "O‘quv markazlari",
+        "trial": "Bepul sinovlar"
+      },
+      "helpfulLinks": {
+        "title": "Foydali havolalar",
+        "faqs": "Ko‘p so‘raladigan savollar",
+        "support": "Yordam",
+        "chat": "Chat"
+      }
+    }
   },
   "LocaleSwitcher": {
     "label": "Tilni tanlang",

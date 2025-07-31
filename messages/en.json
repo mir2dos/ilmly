@@ -12,7 +12,7 @@
       "getStarted": "Get Started"
     },
     "HeroSection": {
-      "sectionTitle": "LU-cy bridges <span class='gradient-text'>Web3</span> and <span class='gradient-text'>AI</span> platforms for dev teams",
+      "sectionTitle": "All-in-one <span class='gradient-text'>platform</span> for private learning centers.",
       "sectionDesc": "The future is a blend of intelligence and decentralization. LU-cy connects AI tools with Web3 infrastructure, giving developers the power to build beyond limits. One platform.",
       "eyebrowHeadline": "Join our waitlist to get <strong>30% off</strong> when the MVP is lauched.",
       "ctaPrimary": "Explore",
@@ -158,7 +158,31 @@
       "sectionTitle": "Contact Us",
       "sectionDesc": "We'll reach out to you in less than 24 hours."
     },
-    "Footer": {}
+    "Footer": {
+      "companyName": "Ilmly",
+      "companyDesc": "All-in-one management platform for private learning centers in Uzbekistan.",
+      "companyLinks": {
+        "title": "Company",
+        "about": "About Us",
+        "partners": "Partners",
+        "news": "News",
+        "pricing": "Pricing",
+        "contact": "Contact"
+      },
+      "resourcesLinks": {
+        "title": "Resources",
+        "guides": "Guides",
+        "demo": "Demo Videos",
+        "centers": "Training Centers",
+        "trial": "Free Trials"
+      },
+      "helpfulLinks": {
+        "title": "Helpful Links",
+        "faqs": "FAQs",
+        "support": "Support",
+        "chat": "Chat"
+      }
+    }
   },
   "LocaleSwitcher": {
     "label": "Change language",

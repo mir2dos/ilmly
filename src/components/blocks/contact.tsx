@@ -144,7 +144,7 @@ export default function Contact() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-b from-blue-700 to-blue-900 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]"
+                    className="w-full bg-blue-800 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center">
@@ -171,7 +171,12 @@ export default function Contact() {
               className="relative my-8 flex h-full w-full items-center justify-center overflow-hidden pr-8"
             >
               <article className="min-h- relative mx-auto h-[350px] overflow-hidden">
-                <Image src="/laptop-mockup.webp" alt="Laptop mockup" />
+                <Image
+                  src="/laptop-mockup.webp"
+                  width="600"
+                  height="400"
+                  alt="Laptop mockup"
+                />
               </article>
             </motion.div>
           </div>

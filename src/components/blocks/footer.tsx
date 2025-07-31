@@ -1,102 +1,57 @@
-import {
-  Dribbble,
-  Facebook,
-  Github,
-  Instagram,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from "lucide-react";
-import Image from "next/image";
+import { Facebook, Github, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-
-const data = {
-  facebookLink: "https://facebook.com/mvpblocks",
-  instaLink: "https://instagram.com/mvpblocks",
-  twitterLink: "https://twitter.com/mvpblocks",
-  githubLink: "https://github.com/mvpblocks",
-  dribbbleLink: "https://dribbble.com/mvpblocks",
-  services: {
-    webdev: "/web-development",
-    webdesign: "/web-design",
-    marketing: "/marketing",
-    googleads: "/google-ads",
-  },
-  about: {
-    history: "/company-history",
-    team: "/meet-the-team",
-    handbook: "/employee-handbook",
-    careers: "/careers",
-  },
-  help: {
-    faqs: "/faqs",
-    support: "/support",
-    livechat: "/live-chat",
-  },
-  contact: {
-    email: "hello@mvpblocks.com",
-    phone: "+91 8637373116",
-    address: "Kolkata, West Bengal, India",
-  },
-  company: {
-    name: "Mvpblocks",
-    description:
-      "Building beautiful and functional web experiences with modern technologies. We help startups and businesses create their digital presence.",
-    logo: "/logo-4.svg",
-  },
-};
+import Logo from "../Logo";
+import { useTranslations } from "next-intl";
 
 const socialLinks = [
-  { icon: Facebook, label: "Facebook", href: data.facebookLink },
-  { icon: Instagram, label: "Instagram", href: data.instaLink },
-  { icon: Twitter, label: "Twitter", href: data.twitterLink },
-  { icon: Github, label: "GitHub", href: data.githubLink },
-  { icon: Dribbble, label: "Dribbble", href: data.dribbbleLink },
-];
-
-const aboutLinks = [
-  { text: "Company History", href: data.about.history },
-  { text: "Meet the Team", href: data.about.team },
-  { text: "Employee Handbook", href: data.about.handbook },
-  { text: "Careers", href: data.about.careers },
-];
-
-const serviceLinks = [
-  { text: "Web Development", href: data.services.webdev },
-  { text: "Web Design", href: data.services.webdesign },
-  { text: "Marketing", href: data.services.marketing },
-  { text: "Google Ads", href: data.services.googleads },
-];
-
-const helpfulLinks = [
-  { text: "FAQs", href: data.help.faqs },
-  { text: "Support", href: data.help.support },
-  { text: "Live Chat", href: data.help.livechat, hasIndicator: true },
+  { icon: Facebook, label: "Facebook", href: "https://facebook.com/mvpblocks" },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://instagram.com/mvpblocks",
+  },
+  { icon: Github, label: "GitHub", href: "https://github.com/mvpblocks" },
 ];
 
 const contactInfo = [
-  { icon: Mail, text: data.contact.email },
-  { icon: Phone, text: data.contact.phone },
-  { icon: MapPin, text: data.contact.address, isAddress: true },
+  { icon: Mail, text: "ilmly@mir2dos.com" },
+  { icon: Phone, text: "+998 90 123 45 67" },
+  { icon: MapPin, text: "Tashkent, Uzbekistan", isAddress: true },
 ];
 
 export default function Footer() {
+  const t = useTranslations("HomePage.Footer");
+
+  const companyLinks = [
+    { text: t("companyLinks.about"), href: "/" },
+    { text: t("companyLinks.partners"), href: "/" },
+    { text: t("companyLinks.news"), href: "/" },
+    { text: t("companyLinks.pricing"), href: "/" },
+    { text: t("companyLinks.contact"), href: "/" },
+  ];
+
+  const resourcesLinks = [
+    { text: t("resourcesLinks.guides"), href: "/" },
+    { text: t("resourcesLinks.demo"), href: "/" },
+    { text: t("resourcesLinks.centers"), href: "/" },
+    { text: t("resourcesLinks.trial"), href: "/" },
+  ];
+
+  const helpfulLinks = [
+    { text: t("helpfulLinks.faqs"), href: "/" },
+    { text: t("helpfulLinks.support"), href: "/" },
+    { text: t("helpfulLinks.chat"), href: "/", hasIndicator: true },
+  ];
+
   return (
     <footer className="bg-secondary dark:bg-secondary/20 mt-16 w-full place-self-end rounded-t-xl">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <div className="text-primary flex justify-center gap-2 sm:justify-start">
-              <Image
-                src={data.company.logo || "/placeholder.svg"}
-                alt="logo"
-                className="h-20 rounded-full"
-              />
-            </div>
+            <Logo />
 
             <p className="text-foreground/50 mt-6 max-w-md text-center leading-relaxed sm:max-w-xs sm:text-left">
-              {data.company.description}
+              {t("companyDesc")}
             </p>
 
             <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
@@ -116,9 +71,9 @@ export default function Footer() {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">About Us</p>
+              <p className="text-lg font-medium">{t("companyLinks.title")}</p>
               <ul className="mt-8 space-y-4 text-sm">
-                {aboutLinks.map(({ text, href }) => (
+                {companyLinks.map(({ text, href }) => (
                   <li key={text}>
                     <a
                       className="text-secondary-foreground/70 transition"
@@ -132,9 +87,9 @@ export default function Footer() {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Our Services</p>
+              <p className="text-lg font-medium">{t("resourcesLinks.title")}</p>
               <ul className="mt-8 space-y-4 text-sm">
-                {serviceLinks.map(({ text, href }) => (
+                {resourcesLinks.map(({ text, href }) => (
                   <li key={text}>
                     <a
                       className="text-secondary-foreground/70 transition"
@@ -148,7 +103,7 @@ export default function Footer() {
             </div>
 
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Helpful Links</p>
+              <p className="text-lg font-medium">{t("helpfulLinks.title")}</p>
               <ul className="mt-8 space-y-4 text-sm">
                 {helpfulLinks.map(({ text, href, hasIndicator }) => (
                   <li key={text}>
@@ -209,7 +164,7 @@ export default function Footer() {
             </p>
 
             <p className="text-secondary-foreground/70 mt-4 text-sm transition sm:order-first sm:mt-0">
-              &copy; 2025 {data.company.name}
+              &copy; 2025 {t("companyName")}
             </p>
           </div>
         </div>

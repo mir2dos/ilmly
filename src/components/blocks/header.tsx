@@ -6,13 +6,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "../LocaleSwitcher";
-// import {
-//   Select,
-//   SelectContent,
-//   SelectItem,
-//   SelectTrigger,
-//   SelectValue,
-// } from "../ui/select";
+import Logo from "../Logo";
 
 interface NavItem {
   name: string;
@@ -77,7 +71,7 @@ export default function Header() {
   return (
     <>
       <motion.header
-        className={`bg-transparent transition-all duration-500`}
+        className={`bg-transparent pt-2 transition-all duration-500`}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -89,12 +83,7 @@ export default function Header() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <Link
-                href="/"
-                className="flex items-center space-x-2 text-xl font-bold"
-              >
-                Ilmly
-              </Link>
+              <Logo size="sm" />
             </motion.div>
 
             <nav className="hidden items-center space-x-1 lg:flex">

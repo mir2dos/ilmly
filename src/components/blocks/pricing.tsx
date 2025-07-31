@@ -26,87 +26,6 @@ type TIER_TYPE = {
   highlighted?: boolean;
 };
 
-// const TIERS = [
-//   {
-//     id: "basic",
-//     name: "Basic",
-//     price: {
-//       monthly: 20,
-//       yearly: 15,
-//     },
-//     description: "Up to 100 students",
-//     features: [
-//       "Free email alerts",
-//       "3-minute checks",
-//       "Automatic data enrichment",
-//       "10 monitors",
-//       "Up to 3 seats",
-//     ],
-//     cta: "Get started",
-//   },
-//   {
-//     id: "pro",
-//     name: "Pro",
-//     price: {
-//       monthly: 50,
-//       yearly: 40,
-//     },
-//     description: "For 100 - 500 students",
-//     features: [
-//       "Unlimited phone calls",
-//       "30 second checks",
-//       "Single-user account",
-//       "20 monitors",
-//       "Up to 6 seats",
-//     ],
-//     cta: "Get started",
-//     popular: true,
-//   },
-//   {
-//     id: "premium",
-//     name: "Premium",
-//     price: {
-//       monthly: 90,
-//       yearly: 80,
-//     },
-//     description: "For 500 - 1000 students",
-//     features: [
-//       "Unlimited phone calls",
-//       "15 second checks",
-//       "Single-user account",
-//       "50 monitors",
-//       "Up to 10 seats",
-//     ],
-//     cta: "Get started",
-//   },
-//   {
-//     id: "enterprise",
-//     name: "Enterprise",
-//     price: {
-//       monthly: "Custom",
-//       yearly: "Custom",
-//     },
-//     description: "For 1000+ students",
-//     features: [
-//       "Everything in Organizations",
-//       "Up to 5 team members",
-//       "100 monitors",
-//       "15 status pages",
-//       "200+ integrations",
-//     ],
-//     cta: "Contact Us",
-//     highlighted: true,
-//   },
-// ];
-
-const HighlightedBackground = () => (
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] bg-[size:45px_45px] opacity-100" />
-);
-
-const PopularBackground = () => (
-  <div className="bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(123, 119, 240, 0.1),rgba(255,255,255,0))] absolute inset-0" />
-);
-
 const Tab = ({
   text,
   selected,
@@ -168,12 +87,10 @@ const PricingCard = ({
         isHighlighted
           ? "bg-foreground text-background"
           : "bg-background text-foreground",
-        isPopular && "outline outline-[#638aeb]",
+        isPopular &&
+          "bg-gradient-to-br from-white to-blue-50 outline outline-blue-300",
       )}
     >
-      {isHighlighted && <HighlightedBackground />}
-      {isPopular && <PopularBackground />}
-
       <h3 className="flex items-center gap-3 text-xl font-medium capitalize">
         {tier.name}
         {isPopular && (
