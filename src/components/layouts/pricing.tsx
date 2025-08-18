@@ -8,7 +8,7 @@ import NumberFlow from "@number-flow/react";
 import { BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import SectionHeader from "../SectionHeader";
+import { SectionHeader } from "./section";
 
 const PAYMENT_FREQUENCIES: ("monthly" | "yearly")[] = ["monthly", "yearly"];
 

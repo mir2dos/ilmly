@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Check, Loader2 } from "lucide-react";
-import SectionHeader from "../SectionHeader";
+import { SectionHeader } from "./section";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-background relative w-full overflow-hidden py-16 md:py-24">
+    <section className="bg-background relative w-full overflow-hidden py-8 md:py-24">
       <SectionHeader
         badge={t("sectionBadge")}
         title={t("sectionTitle")}
@@ -55,18 +55,10 @@ export default function Contact() {
       />
 
       <div className="relative container mx-auto px-4">
-        <div className="border-border/40 bg-secondary/20 mx-auto overflow-hidden rounded-2xl border shadow-xl backdrop-blur-sm">
+        <div className="border-border/50 bg-secondary/20 mx-auto overflow-hidden rounded-2xl border-2 shadow-md backdrop-blur-sm">
           <div className="grid md:grid-cols-2">
             <div className="relative p-6 md:p-10" ref={formRef}>
-              <motion.form
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
-                transition={{ duration: 0.5, delay: 0.3 }}
-                onSubmit={handleSubmit}
-                className="space-y-6"
-              >
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <motion.div
                     className="space-y-2"
@@ -161,15 +153,10 @@ export default function Contact() {
                     )}
                   </Button>
                 </motion.div>
-              </motion.form>
+              </form>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="relative my-8 flex h-full w-full items-center justify-center overflow-hidden pr-8"
-            >
+            <div className="relative my-8 flex h-full w-full items-center justify-center overflow-hidden pr-8">
               <article className="min-h- relative mx-auto h-[350px] overflow-hidden">
                 <Image
                   src="/laptop-mockup.webp"
@@ -178,7 +165,7 @@ export default function Contact() {
                   alt="Laptop mockup"
                 />
               </article>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

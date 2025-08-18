@@ -7,12 +7,12 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "./ui/select";
+} from "./select";
 import { useParams } from "next/navigation";
 import { useLocale, useTranslations } from "use-intl";
 import { routing } from "@/i18n/routing";
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitch() {
   const t = useTranslations("LocaleSwitcher");
   const locale = useLocale();
   const [isPending, startTransition] = useTransition();

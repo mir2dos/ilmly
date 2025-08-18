@@ -1,4 +1,4 @@
-import { Badge } from "./ui/badge";
+import { Badge } from "../ui/badge";
 
 interface Props {
   badge: string;
@@ -6,7 +6,7 @@ interface Props {
   subtitle: string;
 }
 
-export default function SectionHeader({ badge, title, subtitle }: Props) {
+export function SectionHeader({ badge, title, subtitle }: Props) {
   return (
     <div className="space-y-2 py-8 text-center">
       <Badge

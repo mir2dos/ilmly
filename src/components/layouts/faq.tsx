@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import SectionHeader from "../SectionHeader";
+import { SectionHeader } from "./section";
 
 interface FAQItemProps {
   question: string;
@@ -121,7 +121,7 @@ export default function Faq() {
   const faqs = t.raw("faqs") as Omit<FAQItemProps, "index">[];
 
   return (
-    <section className="bg-background relative w-full overflow-hidden py-16">
+    <section className="bg-background relative w-full overflow-hidden py-4">
       {/* Decorative elements */}
       <div className="bg-primary/5 absolute top-20 -left-20 h-64 w-64 rounded-full blur-3xl" />
       <div className="bg-primary/5 absolute -right-20 bottom-20 h-64 w-64 rounded-full blur-3xl" />

@@ -1,6 +1,6 @@
 import { Facebook, Github, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-import Logo from "../Logo";
+import Logo from "../ui/logo";
 import { useTranslations } from "next-intl";
 
 const socialLinks = [
