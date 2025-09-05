@@ -3,10 +3,11 @@
     "Header": {
       "nav": {
         "home": "Home",
-        "features": "Features",
-        "pricing": "Pricing",
         "about": "About",
-        "contact": "Contact"
+        "tests": "Tests",
+        "pricing": "Pricing",
+        "contact": "Contact",
+        "cta": "Start now"
       },
       "signIn": "Sign In",
       "getStarted": "Get Started"
@@ -24,28 +25,16 @@
       "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
       "features": [
         {
-          "title": "Developer-Friendly",
-          "desc": "Tailored for developers to create and iterate fast, with minimal overhead and maximum flexibility."
+          "title": "Customizable",
+          "desc": "You decide where each question will be and what type of question it will be. Your choice. Your test."
         },
         {
-          "title": "CLI Support",
-          "desc": "Command-line interface support for seamless development and workflow integration."
+          "title": "Easy to use",
+          "desc": "Minimal user interface makes it super easy for our users to create any type of questions."
         },
         {
-          "title": "Easily Customizable",
-          "desc": "Every block is built to be editable. From layout to logic, style to structure—make it your own."
-        },
-        {
-          "title": "v0 Support",
-          "desc": "Launch fast with confidence. Perfect for MVPs, prototypes, and weekend projects."
-        },
-        {
-          "title": "Full Documentation",
-          "desc": "Comprehensive documentation to understand every feature and maximize your experience."
-        },
-        {
-          "title": "Contribute Yours",
-          "desc": "Add your own blocks to the library and become part of the Ilmly community."
+          "title": "Make money",
+          "desc": "That’s right, you can make money through our platform by making your tests paid."
         }
       ]
     },
@@ -55,101 +44,72 @@
       "sectionDesc": "Receive unlimited credits when you pay yearly, and save on your plan.",
       "tiers": [
         {
-          "id": "basic",
-          "name": "Basic",
-          "description": "Up to 100 students",
-          "price": {
-            "monthly": 20,
-            "yearly": 15
-          },
+          "type": "Basic",
+          "price": "Free",
           "features": [
-            "Free email alerts",
-            "3-minute checks",
-            "Automatic data enrichment",
-            "10 monitors",
-            "Up to 3 seats"
+            "Dashboard panel",
+            "10 public tests",
+            "5 private tests",
+            "5 question types"
           ],
           "cta": "Get started"
         },
         {
-          "id": "pro",
-          "name": "Pro",
-          "description": "For 100 - 500 students",
-          "price": {
-            "monthly": 50,
-            "yearly": 40
-          },
+          "type": "Pro",
+          "price": "$2/mo.",
           "features": [
-            "Unlimited phone calls",
-            "30 second checks",
-            "Single-user account",
-            "20 monitors",
-            "Up to 6 seats"
+            "Everything in Basic",
+            "Unlimited tests",
+            "Test monetization",
+            "25 question types"
           ],
           "cta": "Get started",
           "popular": true
         },
         {
-          "id": "premium",
-          "name": "Premium",
-          "description": "For 500 - 1000 students",
-          "price": {
-            "monthly": 90,
-            "yearly": 80
-          },
+          "type": "Enterprise",
+          "price": "Custom",
           "features": [
-            "Unlimited phone calls",
-            "15 second checks",
-            "Single-user account",
-            "50 monitors",
-            "Up to 10 seats"
+            "Everything in Pro",
+            "Custom domain",
+            "Custom question types",
+            "24/7 support"
           ],
-          "cta": "Get started"
-        },
-        {
-          "id": "enterprise",
-          "name": "Enterprise",
-          "description": "For 1000+ students",
-          "price": {
-            "monthly": "Custom",
-            "yearly": "Custom"
-          },
-          "features": [
-            "Everything in Organizations",
-            "Up to 5 team members",
-            "100 monitors",
-            "15 status pages",
-            "200+ integrations"
-          ],
-          "cta": "Contact Us",
-          "highlighted": true
+          "cta": "Contact us"
         }
       ]
     },
-    "FAQSection": {
+    "TestimonialsSection": {
       "sectionBadge": "FAQs",
       "sectionTitle": "Frequently Asked Questions",
       "sectionDesc": "Everything you need to know about Ilmly",
-      "faqs": [
+      "testimonials": [
         {
-          "question": "What makes Ilmly unique?",
-          "answer": "Ilmly stands out through its intuitive design, powerful component library, and seamless integration options. We've focused on creating a user experience that combines simplicity with advanced features, all while maintaining excellent performance and accessibility."
+          "author": {
+            "name": "Mirfayz Sayfullayev",
+            "avatar": "/assets/images/testimonials/mirfayz-sayfullayev.png",
+            "position": "Graphic Designer",
+            "company": "Ibrat Ta'lim"
+          },
+          "quote": "Minimal user interface makes it super easy for our users to create any type of questions."
         },
         {
-          "question": "How can I customize the components?",
-          "answer": "All components are built with Tailwind CSS, making them highly customizable. You can modify colors, spacing, typography, and more by simply adjusting the class names or using our theme variables to match your brand identity."
+          "author": {
+            "name": "Doston Nabotov",
+            "avatar": "/assets/images/testimonials/doston-nabotov.png",
+            "position": "Full-Stack Developer",
+            "company": "Microsoft"
+          },
+          "quote": "Minimal user interface makes it super easy for our users to create any type of questions."
         },
         {
-          "question": "Do the components work with dark mode?",
-          "answer": "Yes, all Ilmly components are designed to work seamlessly with both light and dark modes. They automatically adapt to your site's theme settings, providing a consistent user experience regardless of the user's preference."
-        },
-        {
-          "question": "How can I get started with Ilmly?",
-          "answer": "You can get started by browsing our component library and copying the code for the components you need. Our documentation provides clear instructions for installation and usage, and you can always reach out to our support team if you need assistance."
-        },
-        {
-          "question": "Can I use Ilmly for commercial projects?",
-          "answer": "Absolutely! Ilmly is free to use for both personal and commercial projects. There are no licensing fees or attribution requirements—just build and launch your MVP faster than ever before."
+          "author": {
+            "name": "Mirfayz Ashurov",
+            "avatar": "/assets/images/testimonials/mirfayz-ashurov.png",
+            "position": "Project Manager",
+            "company": "Mir2Dos"
+          },
+          "quote": "Minimal user interface makes it super easy for our users to create any type of questions."
         }
       ]
     },

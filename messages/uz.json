@@ -3,10 +3,11 @@
     "Header": {
       "nav": {
         "home": "Bosh sahifa",
-        "features": "Xususiyatlar",
-        "pricing": "Narxlar",
         "about": "Biz haqimizda",
-        "contact": "Aloqa"
+        "tests": "Testlar",
+        "pricing": "Narxlar",
+        "contact": "Aloqa",
+        "cta": "Boshlang"
       },
       "signIn": "Kirish",
       "getStarted": "Boshlash"

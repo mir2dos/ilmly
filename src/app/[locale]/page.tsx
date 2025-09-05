@@ -1,22 +1,23 @@
-import Header from "@/components/layouts/header";
+import CTA from "@/components/layouts/cta";
 import Features from "@/components/layouts/features";
-import Pricing from "@/components/layouts/pricing";
-import Faq from "@/components/layouts/faq";
-import Hero from "@/components/layouts/hero";
 import Footer from "@/components/layouts/footer";
-import Contact from "@/components/layouts/contact";
-import Clients from "@/components/layouts/clients";
+import Header from "@/components/layouts/header";
+import Hero from "@/components/layouts/hero";
+import Pricing from "@/components/layouts/pricing";
+import { Feature1, Feature2 } from "@/components/layouts/single-feature";
+import Testimonials from "@/components/layouts/testimonials";
 
 export default function HomePage() {
   return (
     <>
       <Header />
       <Hero />
-      <Clients />
+      <Feature1 />
       <Features />
+      <Feature2 />
       <Pricing />
-      <Faq />
-      <Contact />
+      <Testimonials />
+      <CTA />
       <Footer />
     </>
   );

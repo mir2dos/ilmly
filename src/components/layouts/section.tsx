@@ -1,22 +1,68 @@
-import { Badge } from "../ui/badge";
+import * as React from "react";
 
-interface Props {
-  badge: string;
-  title: string;
-  subtitle: string;
-}
+import { cn } from "@/lib/utils";
 
-export function SectionHeader({ badge, title, subtitle }: Props) {
+function Section({ className, ...props }: React.ComponentProps<"section">) {
   return (
-    <div className="space-y-2 py-8 text-center">
-      <Badge
-        variant="default"
-        className="bg-blue-900 px-3 py-1 text-xs font-medium tracking-widest uppercase"
-      >
-        {badge}
-      </Badge>
-      <h2 className="text-3xl font-semibold md:text-4xl">{title}</h2>
-      <p className="text-muted-foreground">{subtitle}</p>
-    </div>
+    <section
+      data-slot="section"
+      className={cn("section", className)}
+      {...props}
+    />
   );
 }
+
+function SectionWrapper({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="section-wrapper"
+      className={cn("wrapper space-y-16 py-16", className)}
+      {...props}
+    />
+  );
+}
+
+function SectionHeader({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="section-header"
+      className={cn("space-y-4", className)}
+      {...props}
+    />
+  );
+}
+
+function SectionTitle({ className, ...props }: React.ComponentProps<"h2">) {
+  return (
+    <h2
+      data-slot="section-title"
+      className={cn("text-center text-4xl font-bold", className)}
+      {...props}
+    />
+  );
+}
+
+function SectionSubtitle({ className, ...props }: React.ComponentProps<"p">) {
+  return (
+    <p
+      data-slot="section-subtitle"
+      className={cn("text-center text-base", className)}
+      {...props}
+    />
+  );
+}
+
+function SectionContent({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div data-slot="section-content" className={cn("", className)} {...props} />
+  );
+}
+
+export {
+  Section,
+  SectionWrapper,
+  SectionHeader,
+  SectionTitle,
+  SectionSubtitle,
+  SectionContent,
+};
