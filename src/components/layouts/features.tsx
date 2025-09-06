@@ -1,14 +1,15 @@
 "use client";
 
-import { Blocks, SquareCheckBig, Wallet } from "lucide-react";
 import { useTranslations } from "next-intl";
-import FeatureItem from "../ui/feature-item";
+import { Blocks, SquareCheckBig, Wallet } from "lucide-react";
+
 import {
   Section,
   SectionContent,
   SectionTitle,
   SectionWrapper,
-} from "./section";
+} from "@/components/layouts/section";
+import FeatureItem from "@/components/ui/feature-item";
 
 export default function Features() {
   const t = useTranslations("HomePage.FeaturesSection");
@@ -34,7 +35,7 @@ export default function Features() {
   return (
     <Section>
       <SectionWrapper className="wrapper-sm space-y-16 py-16">
-        <SectionTitle>Our features</SectionTitle>
+        <SectionTitle>{t("sectionTitle")}</SectionTitle>
         <SectionContent>
           <ul className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((item) => (

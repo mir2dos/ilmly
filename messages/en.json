@@ -8,46 +8,51 @@
         "pricing": "Pricing",
         "contact": "Contact",
         "cta": "Start now"
-      },
-      "signIn": "Sign In",
-      "getStarted": "Get Started"
+      }
     },
     "HeroSection": {
-      "sectionTitle": "All-in-one <span class='gradient-text'>platform</span> for private learning centers.",
-      "sectionDesc": "The future is a blend of intelligence and decentralization. LU-cy connects AI tools with Web3 infrastructure, giving developers the power to build beyond limits. One platform.",
-      "eyebrowHeadline": "Join our waitlist to get <strong>30% off</strong> when the MVP is lauched.",
-      "ctaPrimary": "Explore",
-      "ctaSecondary": "Learn More"
+      "title": "The Fastest Way to <span class='gradient-text'>Create & Share</span> Tests Online",
+      "desc": "Build engaging tests in minutes, share a simple link with your students, and get instant results. Perfect for teachers, mentors, and organizations of any size.",
+      "ctaPrimary": "Create test",
+      "ctaSecondary": "See pricing"
     },
+    "SingleFeature": [
+      {
+        "title": "Create tests in just seconds",
+        "desc": "From multiple-choice to essay questions, you can mix and match formats with ease. No setup headaches — just write your questions, customize, and go live.",
+        "cta": "See examples"
+      },
+      {
+        "title": "Publish with one click",
+        "desc": "Decide if your test is public, private, or even monetized. With one click, your test is instantly ready to share with students anywhere.",
+        "cta": "Watch demo"
+      }
+    ],
     "FeaturesSection": {
-      "sectionBadge": "Features",
-      "sectionTitle": "Let’s help build your MVP",
-      "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "sectionTitle": "Why Teachers Love Us",
       "features": [
         {
-          "title": "Customizable",
-          "desc": "You decide where each question will be and what type of question it will be. Your choice. Your test."
+          "title": "Fully customizable",
+          "desc": "Control every detail — question types, order, timing, and access. Your test, your rules."
         },
         {
-          "title": "Easy to use",
-          "desc": "Minimal user interface makes it super easy for our users to create any type of questions."
+          "title": "Effortless to use",
+          "desc": "Our clean interface means you spend less time figuring out tools and more time teaching."
         },
         {
-          "title": "Make money",
-          "desc": "That’s right, you can make money through our platform by making your tests paid."
+          "title": "Earn from your work",
+          "desc": "Turn your expertise into income by charging for access to premium tests."
         }
       ]
     },
     "PricingSection": {
-      "sectionBadge": "Plans",
-      "sectionTitle": "Plans and Pricing",
-      "sectionDesc": "Receive unlimited credits when you pay yearly, and save on your plan.",
+      "sectionTitle": "Simple Pricing",
       "tiers": [
         {
           "type": "Basic",
           "price": "Free",
           "features": [
-            "Dashboard panel",
+            "Personal dashboard",
             "10 public tests",
             "5 private tests",
             "5 question types"
@@ -73,16 +78,14 @@
             "Everything in Pro",
             "Custom domain",
             "Custom question types",
-            "24/7 support"
+            "24/7 priority support"
           ],
           "cta": "Contact us"
         }
       ]
     },
     "TestimonialsSection": {
-      "sectionBadge": "FAQs",
-      "sectionTitle": "Frequently Asked Questions",
-      "sectionDesc": "Everything you need to know about Ilmly",
+      "sectionTitle": "What Our Users Say",
       "testimonials": [
         {
           "author": {
@@ -91,7 +94,7 @@
             "position": "Graphic Designer",
             "company": "Ibrat Ta'lim"
           },
-          "quote": "Minimal user interface makes it super easy for our users to create any type of questions."
+          "quote": "I used to spend hours formatting questions. Now I can set up a full test in less than 10 minutes. My students love the simple link-sharing feature."
         },
         {
           "author": {
@@ -100,7 +103,7 @@
             "position": "Full-Stack Developer",
             "company": "Microsoft"
           },
-          "quote": "Minimal user interface makes it super easy for our users to create any type of questions."
+          "quote": "The clean interface makes it super easy to create even complex test structures. It feels like the tool was built by teachers, for teachers."
         },
         {
           "author": {
@@ -109,43 +112,19 @@
             "position": "Project Manager",
             "company": "Mir2Dos"
           },
-          "quote": "Minimal user interface makes it super easy for our users to create any type of questions."
+          "quote": "We use it in our organization to quickly evaluate candidates. The ability to set private or paid tests gives us total flexibility."
         }
       ]
     },
-    "ContactSection": {
-      "sectionBadge": "Contact",
-      "sectionTitle": "Contact Us",
-      "sectionDesc": "We'll reach out to you in less than 24 hours."
-    },
-    "Footer": {
-      "companyName": "Ilmly",
-      "companyDesc": "All-in-one management platform for private learning centers in Uzbekistan.",
-      "companyLinks": {
-        "title": "Company",
-        "about": "About Us",
-        "partners": "Partners",
-        "news": "News",
-        "pricing": "Pricing",
-        "contact": "Contact"
-      },
-      "resourcesLinks": {
-        "title": "Resources",
-        "guides": "Guides",
-        "demo": "Demo Videos",
-        "centers": "Training Centers",
-        "trial": "Free Trials"
-      },
-      "helpfulLinks": {
-        "title": "Helpful Links",
-        "faqs": "FAQs",
-        "support": "Support",
-        "chat": "Chat"
-      }
+    "SocialSection": {
+      "title": "Want to stay updated?",
+      "desc": "Follow us for tips, updates, and news about upcoming features.",
+      "instagram": "Follow on Instagram",
+      "telegram": "Join on Telegram"
     }
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, uz {🇺🇿 Uzbek} en {🇺🇸 English} other {Unknown}}"
+    "locale": "{locale, select, uz {🇺🇿 Uzbek} en {🇺🇸 English} ru {🇷🇺 Russian} other {Unknown}}"
   }
 }

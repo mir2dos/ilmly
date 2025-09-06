@@ -2,21 +2,23 @@ import { Link } from "@/i18n/navigation";
 import { Button } from "../ui/button";
 import { Section, SectionContent, SectionWrapper } from "./section";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { INSTAGRAM_URL, TELEGRAM_URL } from "@/data/meta";
 
 export default function CTA() {
+  const t = useTranslations("HomePage.SocialSection");
+
   return (
     <Section>
       <SectionWrapper className="wrapper-xs">
         <SectionContent className="bg-muted text-muted-foreground grid items-center rounded-2xl px-12 py-8 md:grid-cols-[1fr_auto]">
           <div className="space-y-4">
-            <h2 className="text-4xl font-bold">Want to stay updated?</h2>
-            <p className="text-tertiary-foreground">
-              Follow us on Telegram & Instagram.
-            </p>
+            <h2 className="text-4xl font-bold">{t("title")}</h2>
+            <p className="text-tertiary-foreground">{t("desc")}</p>
           </div>
           <div className="grid gap-4">
             <Button variant="secondary" size="xl" className="gap-3" asChild>
-              <Link href="instagram.com">
+              <Link href={INSTAGRAM_URL} target="_blank">
                 <Image
                   src="/assets/icons/instagram.svg"
                   alt=""
@@ -24,12 +26,12 @@ export default function CTA() {
                   height={24}
                 />
                 <span className="text-muted-foreground text-lg font-bold">
-                  Follow the news
+                  {t("instagram")}
                 </span>
               </Link>
             </Button>
             <Button variant="secondary" size="xl" className="gap-3" asChild>
-              <Link href="telegram.com">
+              <Link href={TELEGRAM_URL} target="_blank">
                 <Image
                   src="/assets/icons/telegram.svg"
                   alt=""
@@ -37,7 +39,7 @@ export default function CTA() {
                   height={24}
                 />
                 <span className="text-muted-foreground text-lg font-bold">
-                  Join our channel
+                  {t("telegram")}
                 </span>
               </Link>
             </Button>

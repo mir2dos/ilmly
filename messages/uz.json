@@ -3,190 +3,128 @@
     "Header": {
       "nav": {
         "home": "Bosh sahifa",
-        "about": "Biz haqimizda",
+        "about": "Haqida",
         "tests": "Testlar",
         "pricing": "Narxlar",
         "contact": "Aloqa",
-        "cta": "Boshlang"
-      },
-      "signIn": "Kirish",
-      "getStarted": "Boshlash"
+        "cta": "Boshlash"
+      }
     },
     "HeroSection": {
-      "sectionTitle": "LU-cy dev jamoalari uchun <span class='gradient-text'>Web3</span> va <span class='gradient-text'>AI</span> platformalarini bog'laydi",
-      "sectionDesc": "Kelajak aql va markazsizlashtirish uyg'unligidir. LU-cy AI vositalarini Web3 infratuzilmasi bilan bog'lab, dasturchilarga cheksiz imkoniyatlar yaratish kuchini beradi. Bitta platforma.",
-      "eyebrowHeadline": "Kutish ro'yxatimizga qo'shiling va <strong>30% chegirmaga</strong> ega bo'ling.",
-      "ctaPrimary": "Kashf qilish",
-      "ctaSecondary": "Ko'proq ma'lumot olish"
+      "title": "Testlarni <span class='gradient-text'>Yaratish va Ulashish</span>ning Eng Oson Yo‘li",
+      "desc": "Bir necha daqiqada test tuzing, oddiy havola bilan o‘quvchilaringizga yuboring va natijalarni darhol ko‘ring. O‘qituvchilar, mentorlar va tashkilotlar uchun qulay yechim.",
+      "ctaPrimary": "Test yaratish",
+      "ctaSecondary": "Narxlarni ko‘rish"
     },
+    "SingleFeature": [
+      {
+        "title": "Testlarni bir necha soniyada yarating",
+        "desc": "Variantli savollardan tortib inshogacha – istalgan formatni aralashtirib tuzishingiz mumkin. Hech qanday murakkab sozlamalar yo‘q — savollaringizni yozing, sozlang va jonli qiling.",
+        "cta": "Namunalarni ko‘rish"
+      },
+      {
+        "title": "Bir marta bosish bilan chop eting",
+        "desc": "Testni ommaviy, shaxsiy yoki pullik qilish sizning ixtiyoringizda. Qarorni qabul qiling va bir marta bosing — test tayyor!",
+        "cta": "Demoni ko‘rish"
+      }
+    ],
     "FeaturesSection": {
-      "sectionBadge": "Xususiyatlar",
-      "sectionTitle": "Keling, sizning MVP'ingizni qurishga yordam beramiz",
-      "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "sectionTitle": "Nega O‘qituvchilar Bizni Tanlashadi",
       "features": [
         {
-          "title": "Dasturchilar uchun qulay",
-          "desc": "Minimal ortiqcha yuklama va maksimal moslashuvchanlik bilan dasturchilar uchun tezkor yaratish va takrorlashga moslashtirilgan."
+          "title": "To‘liq moslashtiriladi",
+          "desc": "Savollar tartibi, turi, vaqti va kirish huquqini o‘zingiz belgilaysiz. Test – sizniki, qoidalar – sizniki."
         },
         {
-          "title": "CLI qo'llab-quvvatlash",
-          "desc": "Uzliksiz rivojlanish va ish jarayonini integratsiyalash uchun buyruq qatori interfeysini qo'llab-quvvatlash."
+          "title": "Juda oson foydalaniladi",
+          "desc": "Soddalashtirilgan interfeys tufayli vaqtni dasturda emas, balki o‘qitishda sarflaysiz."
         },
         {
-          "title": "Oson sozlanadigan",
-          "desc": "Har bir blok tahrirlanadigan qilib qurilgan. Layout'dan tortib mantiqqa, uslubdan tortib tuzilishgacha — o'zingizga moslashtiring."
-        },
-        {
-          "title": "v0 qo'llab-quvvatlash",
-          "desc": "Ishonch bilan tez ishga tushiring. MVPlar, prototiplar va dam olish kunlari loyihalari uchun a'lo darajada."
-        },
-        {
-          "title": "To'liq hujjatlar",
-          "desc": "Har bir xususiyatni tushunish va tajribangizni maksimal darajada oshirish uchun keng qamrovli hujjatlar."
-        },
-        {
-          "title": "O'zingiznikini qo'shing",
-          "desc": "Kutubxonaga o'zingizning bloklaringizni qo'shing va Ilmly hamjamiyatining bir qismiga aylaning."
+          "title": "Daromad toping",
+          "desc": "Bilimingizni pulli testlar orqali daromadga aylantiring."
         }
       ]
     },
     "PricingSection": {
-      "sectionBadge": "Narxlar",
-      "sectionTitle": "Rejalar va Narxlar",
-      "sectionDesc": "Yillik to'lov qilsangiz, cheksiz kreditlar oling va rejangizda tejang.",
+      "sectionTitle": "Oddiy Narxlar",
       "tiers": [
         {
-          "id": "basic",
-          "name": "Asosiy",
-          "description": "100 tagacha talaba",
-          "price": {
-            "monthly": 20,
-            "yearly": 15
-          },
+          "type": "Basic",
+          "price": "Bepul",
           "features": [
-            "Bepul elektron pochta bildirishnomalari",
-            "3 daqiqalik tekshiruvlar",
-            "Avtomatik ma'lumotlarni boyitish",
-            "10 ta monitor",
-            "3 tagacha o'rin"
+            "Shaxsiy panel",
+            "10 ta ochiq test",
+            "5 ta yopiq test",
+            "5 ta savol turi"
           ],
           "cta": "Boshlash"
         },
         {
-          "id": "pro",
-          "name": "Pro",
-          "description": "100 - 500 talaba uchun",
-          "price": {
-            "monthly": 50,
-            "yearly": 40
-          },
+          "type": "Pro",
+          "price": "Oyiga $2",
           "features": [
-            "Cheksiz telefon qo'ng'iroqlari",
-            "30 soniyalik tekshiruvlar",
-            "Yagona foydalanuvchi hisobi",
-            "20 ta monitor",
-            "6 tagacha o'rin"
+            "Basic’dagi hamma imkoniyatlar",
+            "Cheksiz testlar",
+            "Testni monetizatsiya qilish",
+            "25 ta savol turi"
           ],
           "cta": "Boshlash",
           "popular": true
         },
         {
-          "id": "premium",
-          "name": "Premium",
-          "description": "500 - 1000 talaba uchun",
-          "price": {
-            "monthly": 90,
-            "yearly": 80
-          },
+          "type": "Enterprise",
+          "price": "Kelishilgan",
           "features": [
-            "Cheksiz telefon qo'ng'iroqlari",
-            "15 soniyalik tekshiruvlar",
-            "Yagona foydalanuvchi hisobi",
-            "50 ta monitor",
-            "10 tagacha o'rin"
+            "Pro’dagi hamma imkoniyatlar",
+            "Shaxsiy domen",
+            "O‘ziga xos savol turlari",
+            "24/7 qo‘llab-quvvatlash"
           ],
-          "cta": "Boshlash"
-        },
-        {
-          "id": "enterprise",
-          "name": "Korporativ",
-          "description": "1000+ talaba uchun",
-          "price": {
-            "monthly": "Maxsus",
-            "yearly": "Maxsus"
-          },
-          "features": [
-            "Tashkilotlardagi hamma narsa",
-            "5 tagacha jamoa a'zosi",
-            "100 ta monitor",
-            "15 ta holat sahifasi",
-            "200+ integratsiyalar"
-          ],
-          "cta": "Biz bilan bog'lanish",
-          "highlighted": true
+          "cta": "Biz bilan bog‘laning"
         }
       ]
     },
-    "FAQSection": {
-      "sectionBadge": "Savollar",
-      "sectionTitle": "Tez-tez beriladigan savollar",
-      "sectionDesc": "Ilmly haqida bilishingiz kerak bo'lgan hamma narsa",
-      "faqs": [
+    "TestimonialsSection": {
+      "sectionTitle": "Foydalanuvchilar Fikri",
+      "testimonials": [
         {
-          "question": "Ilmly'ni nima noyob qiladi?",
-          "answer": "Ilmly o'zining intuitiv dizayni, kuchli komponentlar kutubxonasi va uzluksiz integratsiya imkoniyatlari bilan ajralib turadi. Biz soddalikni ilg'or xususiyatlar bilan birlashtirgan, ayni paytda ajoyib ishlash va foydalanish imkoniyatini saqlab qolgan foydalanuvchi tajribasini yaratishga e'tibor qaratdik."
+          "author": {
+            "name": "Mirfayz Sayfullayev",
+            "avatar": "/assets/images/testimonials/mirfayz-sayfullayev.png",
+            "position": "Grafik Dizayner",
+            "company": "Ibrat Ta'lim"
+          },
+          "quote": "Avvallari testlarni formatlashga soatlar ketardi. Endi esa 10 daqiqada to‘liq test tayyorlayman. O‘quvchilarim oddiy havola orqali oson kirishidan juda xursand."
         },
         {
-          "question": "Komponentlarni qanday sozlashim mumkin?",
-          "answer": "Barcha komponentlar Tailwind CSS bilan qurilgan bo'lib, ular juda moslashuvchan. Ranglar, bo'shliqlar, tipografiya va boshqalarni sinf nomlarini sozlash yoki brendingizga mos keladigan mavzu o'zgaruvchilarimizdan foydalanish orqali o'zgartirishingiz mumkin."
+          "author": {
+            "name": "Doston Nabotov",
+            "avatar": "/assets/images/testimonials/doston-nabotov.png",
+            "position": "Full-Stack Dasturchi",
+            "company": "Microsoft"
+          },
+          "quote": "Soddalashtirilgan interfeys tufayli hatto murakkab testlarni ham bemalol yaratish mumkin. Haqiqatan ham o‘qituvchilar uchun yaratilgan dastur."
         },
         {
-          "question": "Komponentlar qorong'u rejimda ishlaydimi?",
-          "answer": "Ha, barcha Ilmly komponentlari yorug'lik va qorong'u rejimlar bilan uzluksiz ishlash uchun mo'ljallangan. Ular foydalanuvchining xohishidan qat'i nazar, izchil foydalanuvchi tajribasini ta'minlab, saytingizning mavzu sozlamalariga avtomatik ravishda moslashadi."
-        },
-        {
-          "question": "Ilmly bilan qanday boshlashim mumkin?",
-          "answer": "Komponentlar kutubxonamizni ko'rib chiqish va sizga kerak bo'lgan komponentlar uchun kodni nusxalash orqali boshlashingiz mumkin. Hujjatlarimiz o'rnatish va foydalanish bo'yicha aniq ko'rsatmalar beradi va agar sizga yordam kerak bo'lsa, har doim bizning qo'llab-quvvatlash jamoamizga murojaat qilishingiz mumkin."
-        },
-        {
-          "question": "Ilmly'ni tijorat loyihalari uchun ishlatsam bo'ladimi?",
-          "answer": "Albatta! Ilmly shaxsiy va tijorat loyihalari uchun bepul. Litsenziya to'lovlari yoki atrof-muhit talablari yo'q — shunchaki MVP'ingizni har qachongidan ham tezroq yarating va ishga tushiring."
+          "author": {
+            "name": "Mirfayz Ashurov",
+            "avatar": "/assets/images/testimonials/mirfayz-ashurov.png",
+            "position": "Loyiha Menejeri",
+            "company": "Mir2Dos"
+          },
+          "quote": "Biz uni nomzodlarni tezkor baholash uchun ishlatamiz. Shaxsiy yoki pullik test qilish imkoniyati bizga to‘liq moslashuvchanlik beradi."
         }
       ]
     },
-    "ContactSection": {
-      "sectionBadge": "Aloqa",
-      "sectionTitle": "Aloqaga chiqing",
-      "sectionDesc": "24 soatdan kamroq vaqt ichida siz bilan bog'lanamiz."
-    },
-    "Footer": {
-      "companyName": "Ilmly",
-      "companyDesc": "O‘zbekistondagi xususiy o‘quv markazlari uchun barchasi bir joyda boshqaruv platformasi.",
-      "companyLinks": {
-        "title": "Kompaniya",
-        "about": "Biz haqimizda",
-        "partners": "Hamkorlar",
-        "news": "Yangiliklar",
-        "pricing": "Narxlar",
-        "contact": "Aloqa"
-      },
-      "resourcesLinks": {
-        "title": "Resurslar",
-        "guides": "Qo‘llanmalar",
-        "demo": "Demo videolar",
-        "centers": "O‘quv markazlari",
-        "trial": "Bepul sinovlar"
-      },
-      "helpfulLinks": {
-        "title": "Foydali havolalar",
-        "faqs": "Ko‘p so‘raladigan savollar",
-        "support": "Yordam",
-        "chat": "Chat"
-      }
+    "SocialSection": {
+      "title": "Yangiliklardan xabardor bo‘ling",
+      "desc": "Yangiliklar, maslahatlar va yangi funksiyalar haqida bizni kuzatib boring.",
+      "instagram": "Instagram’da kuzatish",
+      "telegram": "Telegram kanaliga qo‘shilish"
     }
   },
   "LocaleSwitcher": {
-    "label": "Tilni tanlang",
-    "locale": "{locale, select, uz {🇺🇿 Uzbek} en {🇺🇸 English} other {Nomalum}}"
+    "label": "Tilni o‘zgartirish",
+    "locale": "{locale, select, uz {🇺🇿 O‘zbekcha} en {🇺🇸 Inglizcha} ru {🇷🇺 Ruscha} other {Noma’lum}}"
   }
 }

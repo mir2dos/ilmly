@@ -41,7 +41,7 @@ export default function LocaleSwitch() {
       onValueChange={onSelectChange}
       disabled={isPending}
     >
-      <SelectTrigger className="w-[130px]">
+      <SelectTrigger className="w-[150px]">
         <SelectValue placeholder="Language" />
       </SelectTrigger>
       <SelectContent>

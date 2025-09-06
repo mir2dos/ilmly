@@ -5,13 +5,22 @@ import {
   Play,
   SquareCheckBig,
 } from "lucide-react";
-import { Section, SectionContent, SectionWrapper } from "./section";
-import { Card } from "../ui/card";
-import { Button } from "../ui/button";
+import { useTranslations } from "next-intl";
+
 import { Link } from "@/i18n/navigation";
-import { AspectRatio } from "../ui/aspect-ratio";
+
+import {
+  Section,
+  SectionContent,
+  SectionWrapper,
+} from "@/components/layouts/section";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export function Feature1() {
+  const t = useTranslations("HomePage.SingleFeature");
+
   const tests = [
     <Headphones key="headphones" size={75} />,
     <Book key="book" size={75} />,
@@ -34,16 +43,10 @@ export function Feature1() {
             </ul>
           </div>
           <div className="space-y-6">
-            <h2 className="max-w-[15ch] text-5xl font-bold">
-              Create tests in just seconds
-            </h2>
-            <p className="max-w-[50ch]">
-              Easily create, customize and publish your IELTS tests online.
-              Plus, you can share it with others, too. Not only it’s free, but
-              also we provide exclusive options in our Pro plan.
-            </p>
+            <h2 className="max-w-[15ch] text-5xl font-bold">{t("0.title")}</h2>
+            <p className="max-w-[50ch]">{t("0.desc")}</p>
             <Button size="lg" asChild>
-              <Link href="/tests">See examples</Link>
+              <Link href="/tests">{t("0.cta")}</Link>
             </Button>
           </div>
         </SectionContent>
@@ -53,21 +56,17 @@ export function Feature1() {
 }
 
 export function Feature2() {
+  const t = useTranslations("HomePage.SingleFeature");
+
   return (
     <Section>
       <SectionWrapper className="wrapper-sm pt-4">
         <SectionContent className="grid items-center gap-8 px-8 lg:grid-cols-2">
           <div className="space-y-6">
-            <h2 className="max-w-[12ch] text-5xl font-bold">
-              Publish it in just 1 click
-            </h2>
-            <p className="max-w-[50ch]">
-              You can decide whether you want your tests to be public, private
-              and behind the paywall. Once you’ve decided, click on Publish and
-              watch the magic unfold.
-            </p>
+            <h2 className="max-w-[12ch] text-5xl font-bold">{t("1.title")}</h2>
+            <p className="max-w-[50ch]">{t("1.desc")}</p>
             <Button size="lg" asChild>
-              <Link href="/tests">Watch demo</Link>
+              <Link href="/tests">{t("1.cta")}</Link>
             </Button>
           </div>
           <div className="p-8">

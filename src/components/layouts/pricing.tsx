@@ -20,7 +20,7 @@ export default function Pricing() {
   const tiers = t.raw("tiers") as Array<TIER_TYPE>;
 
   return (
-    <Section className="pricing text-muted-foreground">
+    <Section id="pricing" className="pricing text-muted-foreground">
       <SectionWrapper className="wrapper-sm pt-48 pb-64">
         <SectionTitle>Pricing</SectionTitle>
         <SectionContent>

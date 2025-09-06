@@ -154,7 +154,7 @@
   }
 
   .gradient-text {
-    @apply from-primary bg-gradient-to-r via-blue-700 to-blue-300 bg-clip-text text-transparent;
+    @apply from-accent via-accent to-primary bg-gradient-to-r bg-clip-text text-transparent;
   }
 
   .ribbon-text {
