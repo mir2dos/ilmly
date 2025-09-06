@@ -4,6 +4,7 @@ import "../globals.css";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -32,6 +33,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${interSans.variable} antialiased`}>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
