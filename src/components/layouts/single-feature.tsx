@@ -22,29 +22,31 @@ export function Feature1() {
   const t = useTranslations("HomePage.SingleFeature");
 
   const tests = [
-    <Headphones key="headphones" size={75} />,
-    <Book key="book" size={75} />,
-    <PencilRuler key="pencil" size={75} />,
-    <SquareCheckBig key="check" size={75} />,
+    <Headphones key="headphones" className="h-12 w-12 md:h-20 md:w-20" />,
+    <Book key="book" className="h-12 w-12 md:h-20 md:w-20" />,
+    <PencilRuler key="pencil" className="h-12 w-12 md:h-20 md:w-20" />,
+    <SquareCheckBig key="check" className="h-12 w-12 md:h-20 md:w-20" />,
   ];
 
   return (
     <Section>
-      <SectionWrapper className="wrapper-sm pt-4">
-        <SectionContent className="grid items-center gap-8 lg:grid-cols-2">
+      <SectionWrapper className="wrapper-sm">
+        <SectionContent className="grid items-center gap-8 md:grid-cols-2">
           <div>
-            <ul className="mx-auto mt-20 grid w-fit grid-cols-2 items-center gap-10">
+            <ul className="mx-auto grid w-fit grid-cols-2 items-center gap-4 md:mt-20 md:gap-10">
               {tests.map((test, idx) => (
                 // staircase grid layout
                 <li key={idx} className={`${idx % 2 !== 0 ? "-mt-20" : ""}`}>
-                  <Card className="p-8">{test}</Card>
+                  <Card className="p-4 md:p-8">{test}</Card>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="space-y-6">
-            <h2 className="max-w-[15ch] text-5xl font-bold">{t("0.title")}</h2>
-            <p className="max-w-[50ch]">{t("0.desc")}</p>
+          <div className="space-y-4 text-center md:space-y-6 md:text-left">
+            <h2 className="mx-auto max-w-[15ch] text-4xl font-bold md:mx-0 md:text-5xl">
+              {t("0.title")}
+            </h2>
+            <p className="mx-auto max-w-[50ch] md:mx-0">{t("0.desc")}</p>
             <Button size="lg" asChild>
               <Link href="/tests">{t("0.cta")}</Link>
             </Button>
@@ -61,17 +63,19 @@ export function Feature2() {
   return (
     <Section>
       <SectionWrapper className="wrapper-sm pt-4">
-        <SectionContent className="grid items-center gap-8 px-8 lg:grid-cols-2">
-          <div className="space-y-6">
-            <h2 className="max-w-[12ch] text-5xl font-bold">{t("1.title")}</h2>
-            <p className="max-w-[50ch]">{t("1.desc")}</p>
+        <SectionContent className="grid items-center gap-8 px-8 md:grid-cols-2">
+          <div className="space-y-4 text-center md:space-y-6 md:text-left">
+            <h2 className="mx-auto max-w-[15ch] text-4xl font-bold md:mx-0 md:text-5xl">
+              {t("1.title")}
+            </h2>
+            <p className="mx-auto max-w-[50ch] md:mx-0">{t("1.desc")}</p>
             <Button size="lg" asChild>
               <Link href="/tests">{t("1.cta")}</Link>
             </Button>
           </div>
-          <div className="p-8">
+          <div className="md:p-8">
             <AspectRatio ratio={16 / 9}>
-              <Card className="grid h-full place-content-center p-2">
+              <Card className="grid h-full place-content-center">
                 <Play size={70} />
               </Card>
             </AspectRatio>

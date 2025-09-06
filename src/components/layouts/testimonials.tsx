@@ -20,7 +20,7 @@ export default function Testimonials() {
 
   return (
     <Section className="relative">
-      <div className="absolute -top-30 left-30">
+      <div className="absolute -top-24 left-4 md:-top-30 md:left-30">
         <Image src="/assets/icons/quote.svg" alt="" width={120} height={120} />
       </div>
       <SectionWrapper className="wrapper-lg">

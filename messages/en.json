@@ -46,7 +46,7 @@
       ]
     },
     "PricingSection": {
-      "sectionTitle": "Simple Pricing",
+      "sectionTitle": "Pricing",
       "tiers": [
         {
           "type": "Basic",

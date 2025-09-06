@@ -11,13 +11,18 @@ export default function CTA() {
   return (
     <Section>
       <SectionWrapper className="wrapper-xs">
-        <SectionContent className="bg-muted text-muted-foreground grid items-center rounded-2xl px-12 py-8 md:grid-cols-[1fr_auto]">
+        <SectionContent className="bg-muted text-muted-foreground grid items-center gap-4 rounded-2xl px-12 py-8 md:grid-cols-[1fr_auto]">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold">{t("title")}</h2>
             <p className="text-tertiary-foreground">{t("desc")}</p>
           </div>
           <div className="grid gap-4">
-            <Button variant="secondary" size="xl" className="gap-3" asChild>
+            <Button
+              variant="secondary"
+              size="xl"
+              className="w-fit gap-3"
+              asChild
+            >
               <Link href={INSTAGRAM_URL} target="_blank">
                 <Image
                   src="/assets/icons/instagram.svg"
@@ -30,7 +35,12 @@ export default function CTA() {
                 </span>
               </Link>
             </Button>
-            <Button variant="secondary" size="xl" className="gap-3" asChild>
+            <Button
+              variant="secondary"
+              size="xl"
+              className="w-fit gap-3"
+              asChild
+            >
               <Link href={TELEGRAM_URL} target="_blank">
                 <Image
                   src="/assets/icons/telegram.svg"
