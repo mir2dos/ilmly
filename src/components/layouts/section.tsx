@@ -6,7 +6,7 @@ function Section({ className, ...props }: React.ComponentProps<"section">) {
   return (
     <section
       data-slot="section"
-      className={cn("section", className)}
+      className={cn("section py-8 md:py-16", className)}
       {...props}
     />
   );
@@ -16,7 +16,7 @@ function SectionWrapper({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="section-wrapper"
-      className={cn("wrapper space-y-16 py-8 md:py-16", className)}
+      className={cn("wrapper space-y-16", className)}
       {...props}
     />
   );

@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import {
   Book,
   Headphones,
@@ -5,7 +8,6 @@ import {
   Play,
   SquareCheckBig,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
 
@@ -61,8 +63,8 @@ export function Feature2() {
   const t = useTranslations("HomePage.SingleFeature");
 
   return (
-    <Section>
-      <SectionWrapper className="wrapper-sm pt-4">
+    <Section className="pt-4">
+      <SectionWrapper className="wrapper-sm">
         <SectionContent className="grid items-center gap-8 px-8 md:grid-cols-2">
           <div className="space-y-4 text-center md:space-y-6 md:text-left">
             <h2 className="mx-auto max-w-[15ch] text-4xl font-bold md:mx-0 md:text-5xl">

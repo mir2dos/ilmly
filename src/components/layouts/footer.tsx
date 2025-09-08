@@ -1,8 +1,11 @@
-import { Mail } from "lucide-react";
-import Logo from "../ui/logo";
-import { SectionContent } from "./section";
 import Link from "next/link";
-import LocaleSwitch from "../ui/locale-switch";
+
+import { Mail } from "lucide-react";
+
+import { SectionContent } from "@/components/layouts/section";
+
+import Logo from "@/components/ui/logo";
+import LocaleSwitch from "@/components/ui/locale-switch";
 
 export default function Footer() {
   return (
@@ -21,7 +24,7 @@ export default function Footer() {
           </div>
         </SectionContent>
       </div>
-      <div className="bg-muted text-muted-foreground py-4 text-center">
+      <div className="bg-background-dark text-foreground-dark py-4 text-center">
         © Copyright 2025 - Mir2Dos
       </div>
     </footer>

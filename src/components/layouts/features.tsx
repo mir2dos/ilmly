@@ -34,7 +34,7 @@ export default function Features() {
 
   return (
     <Section>
-      <SectionWrapper className="wrapper-sm space-y-16 py-16">
+      <SectionWrapper className="wrapper-sm space-y-16">
         <SectionTitle>{t("sectionTitle")}</SectionTitle>
         <SectionContent>
           <ul className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">

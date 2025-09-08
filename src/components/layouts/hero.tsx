@@ -16,7 +16,7 @@ export default function Hero() {
   const t = useTranslations("HomePage.HeroSection");
 
   return (
-    <Section className="hero text-muted-foreground">
+    <Section className="hero text-foreground-dark">
       <SectionWrapper className="wrapper-lg">
         <SectionContent className="grid items-center gap-8 pb-32 text-center lg:grid-cols-2 lg:text-left">
           <div className="space-y-4 md:space-y-8">
@@ -24,7 +24,7 @@ export default function Hero() {
               className="mx-auto max-w-[25ch] text-4xl leading-[1.1] font-bold md:max-w-[15ch] md:text-6xl lg:mx-0 lg:text-7xl"
               dangerouslySetInnerHTML={{ __html: t.raw("title") }}
             ></h1>
-            <p className="text-tertiary-foreground mx-auto max-w-[60ch] lg:mx-0">
+            <p className="text-secondary-foreground-dark mx-auto max-w-[60ch] lg:mx-0">
               {t("desc")}
             </p>
             <div className="mx-auto flex w-fit gap-4 lg:mx-0">

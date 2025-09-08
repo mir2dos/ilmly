@@ -22,7 +22,7 @@ export default function PricingItem({ item }: PricingItemProps) {
   return (
     <li>
       <Card
-        className={`bg-tertiary text-muted-foreground border-border-dark text-center ${popularClassNames} relative overflow-hidden`}
+        className={`bg-secondary-dark text-foreground-dark border-border-dark text-center ${popularClassNames} relative overflow-hidden`}
       >
         {item.popular ? <Ribbon>Most popular</Ribbon> : null}
         <CardHeader className="space-y-4 pt-4">
@@ -30,7 +30,7 @@ export default function PricingItem({ item }: PricingItemProps) {
           <p className="text-5xl font-bold">{item.price}</p>
         </CardHeader>
         <CardContent>
-          <ul className="text-tertiary-foreground space-y-4">
+          <ul className="text-secondary-foreground-dark space-y-4">
             {item.features.map((feature) => (
               <li
                 key={feature}

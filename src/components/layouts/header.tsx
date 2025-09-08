@@ -6,7 +6,6 @@ import { Link } from "@/i18n/navigation";
 
 import Logo from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
-
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -43,9 +42,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-muted text-muted-foreground">
+    <header className="bg-background-dark text-foreground-dark">
       <div className="wrapper-lg grid h-18 grid-cols-[1fr_auto] items-center gap-4">
-        {/* Left side */}
+        {/* Mobile view */}
         <div className="flex items-center gap-2">
           {/* Mobile menu trigger */}
           <Popover>
@@ -82,11 +81,17 @@ export default function Header() {
                 </svg>
               </Button>
             </PopoverTrigger>
-            <PopoverContent align="start" className="w-64 p-1 md:hidden">
+            <PopoverContent
+              align="start"
+              className="bg-background-dark text-foreground-dark border-border-dark w-64 p-1 md:hidden"
+            >
               <NavigationMenu className="max-w-none *:w-full">
                 <NavigationMenuList className="flex-col items-start gap-0 md:gap-2">
                   {navigationLinks.map((link, index) => (
-                    <NavigationMenuItem key={index} className="w-full">
+                    <NavigationMenuItem
+                      key={index}
+                      className="hover:bg-secondary-dark w-full rounded-sm"
+                    >
                       <NavigationMenuLink href={link.href} className="py-1.5">
                         {link.label}
                       </NavigationMenuLink>
@@ -96,17 +101,17 @@ export default function Header() {
               </NavigationMenu>
             </PopoverContent>
           </Popover>
-          {/* Main nav */}
+          {/* Desktop view */}
           <div className="flex w-full items-center justify-between gap-4">
             <Logo variant="8" size="md" />
-            {/* Navigation menu */}
+            {/* Navigation menu on desktop */}
             <NavigationMenu viewport={false} className="max-md:hidden">
               <NavigationMenuList className="gap-6">
                 {navigationLinks.map((link, index) => (
                   <NavigationMenuItem key={index}>
                     <NavigationMenuLink
                       href={link.href}
-                      className="text-muted-foreground hover:text-tertiary-foreground py-1.5 font-semibold"
+                      className="text-foreground-dark hover:text-secondary-foreground-dark py-1.5 font-semibold"
                     >
                       {link.label}
                     </NavigationMenuLink>

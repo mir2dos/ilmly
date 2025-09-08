@@ -1,11 +1,15 @@
+"use client";
+
 import { useTranslations } from "next-intl";
-import PricingItem from "../ui/pricing-item";
+
 import {
   Section,
   SectionContent,
   SectionTitle,
   SectionWrapper,
-} from "./section";
+} from "@/components/layouts/section";
+
+import PricingItem from "@/components/ui/pricing-item";
 
 type TIER_TYPE = {
   type: string;
@@ -20,8 +24,11 @@ export default function Pricing() {
   const tiers = t.raw("tiers") as Array<TIER_TYPE>;
 
   return (
-    <Section id="pricing" className="pricing text-muted-foreground">
-      <SectionWrapper className="wrapper-sm pt-32 pb-48 md:pt-48 md:pb-64">
+    <Section
+      id="pricing"
+      className="pricing text-foreground-dark pt-32 pb-48 md:pt-48 md:pb-64"
+    >
+      <SectionWrapper className="wrapper-sm">
         <SectionTitle className="mix-blend-difference">
           {t("sectionTitle")}
         </SectionTitle>

@@ -12,6 +12,7 @@ import {
   SectionTitle,
   SectionWrapper,
 } from "@/components/layouts/section";
+
 import TestimonialItem from "@/components/ui/testimonial-item";
 
 export default function Testimonials() {
