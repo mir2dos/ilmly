@@ -8,7 +8,7 @@ interface LogoProps {
 
 const Logo = ({ variant = "4", size = "md" }: LogoProps) => {
   return (
-    <Link href="/">
+    <Link href="/" className="block">
       <Image
         src={`/logo/logo-${variant}.svg`}
         alt="logo"

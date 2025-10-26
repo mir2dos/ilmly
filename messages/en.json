@@ -1,47 +1,44 @@
 {
   "HomePage": {
     "Header": {
-      "nav": {
-        "home": "Home",
-        "about": "About",
-        "tests": "Tests",
-        "pricing": "Pricing",
-        "contact": "Contact",
-        "cta": "Start now"
-      }
+      "links": [
+        { "label": "Home", "url": "#" },
+        { "label": "About Us", "url": "#" },
+        { "label": "Features", "url": "#" },
+        { "label": "Pricing", "url": "#" },
+        { "label": "Contact", "url": "#" }
+      ],
+      "ctaPrimary": "Sign up",
+      "ctaSecondary": "Log in"
     },
     "HeroSection": {
-      "title": "The Fastest Way to <span class='gradient-text'>Create & Share</span> Tests Online",
-      "desc": "Build engaging tests in minutes, share a simple link with your students, and get instant results. Perfect for teachers, mentors, and organizations of any size.",
-      "ctaPrimary": "Create test",
-      "ctaSecondary": "See pricing"
+      "title": "Smarter, simpler way to run your learning center",
+      "desc": "Everything you need to run your learning center, beautifully organized.",
+      "ctaPrimary": "Get Started",
+      "ctaSecondary": "See demo"
     },
-    "SingleFeature": [
-      {
-        "title": "Create tests in just seconds",
-        "desc": "From multiple-choice to essay questions, you can mix and match formats with ease. No setup headaches — just write your questions, customize, and go live.",
-        "cta": "See examples"
-      },
-      {
-        "title": "Publish with one click",
-        "desc": "Decide if your test is public, private, or even monetized. With one click, your test is instantly ready to share with students anywhere.",
-        "cta": "Watch demo"
-      }
-    ],
     "FeaturesSection": {
-      "sectionTitle": "Why Teachers Love Us",
+      "sectionTitle": "The Problem",
       "features": [
         {
-          "title": "Fully customizable",
-          "desc": "Control every detail — question types, order, timing, and access. Your test, your rules."
+          "icon": "shapes",
+          "title": "Scattered tools",
+          "desc": "Every task needs a different app"
         },
         {
-          "title": "Effortless to use",
-          "desc": "Our clean interface means you spend less time figuring out tools and more time teaching."
+          "icon": "message-circle-off",
+          "title": "Poor communication",
+          "desc": "Messages get lost across chat groups"
         },
         {
-          "title": "Earn from your work",
-          "desc": "Turn your expertise into income by charging for access to premium tests."
+          "icon": "notebook-pen",
+          "title": "Manual work",
+          "desc": "Too much time wasted on repetition"
+        },
+        {
+          "icon": "trending-down",
+          "title": "Lack of insights",
+          "desc": "No clear data or growth tracking"
         }
       ]
     },
@@ -49,26 +46,30 @@
       "sectionTitle": "Pricing",
       "tiers": [
         {
-          "type": "Basic",
+          "type": "Hobby",
           "price": "Free",
           "features": [
-            "Personal dashboard",
-            "10 public tests",
-            "5 private tests",
-            "5 question types"
+            "Up to 10 students",
+            "Basic class management",
+            "Attendance tracking",
+            "Announcements & reminders",
+            "Limited reports",
+            "Email support"
           ],
-          "cta": "Get started"
+          "cta": "Choose Free"
         },
         {
           "type": "Pro",
-          "price": "$2/mo.",
+          "price": "$5/mo.",
           "features": [
-            "Everything in Basic",
-            "Unlimited tests",
-            "Test monetization",
-            "25 question types"
+            "Everything in Free",
+            "Unlimited students & classes",
+            "Advanced insights",
+            "Automated invoices",
+            "Customizable schedules",
+            "Priority support"
           ],
-          "cta": "Get started",
+          "cta": "Choose Pro",
           "popular": true
         },
         {
@@ -76,11 +77,39 @@
           "price": "Custom",
           "features": [
             "Everything in Pro",
-            "Custom domain",
-            "Custom question types",
-            "24/7 priority support"
+            "Custom account manager",
+            "White-label branding",
+            "Custom integrations",
+            "Onboarding",
+            "24/7 support"
           ],
           "cta": "Contact us"
+        }
+      ]
+    },
+    "DemoSection": {
+      "sectionTitle": "Focus on teaching — we’ll handle the rest",
+      "cta": "Get started"
+    },
+    "FAQsSection": {
+      "sectionTitle": "Frequently Asked Questions",
+      "sectionDesc": "Got questions? We’ve got answers. Here’s everything you need to know before getting started.",
+      "faqs": [
+        {
+          "question": "Do I need any technical setup?",
+          "answer": "No. Our platform is designed to be super simple to understand."
+        },
+        {
+          "question": "Can multiple teachers use one account?",
+          "answer": "Yes, up to 3 teachers can use a single account."
+        },
+        {
+          "question": "Do you offer support in Uzbek?",
+          "answer": "Yes, the platform supports Uzbek language natively."
+        },
+        {
+          "question": "Can I use this platform for free?",
+          "answer": "Absolutely. You can start for free and upgrade anytime."
         }
       ]
     },
@@ -89,38 +118,104 @@
       "testimonials": [
         {
           "author": {
-            "name": "Mirfayz Sayfullayev",
-            "avatar": "/assets/images/testimonials/mirfayz-sayfullayev.png",
-            "position": "Graphic Designer",
-            "company": "Ibrat Ta'lim"
+            "name": "Shuhrat Mansurov",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Director",
+            "company": "EduZone Center"
           },
-          "quote": "I used to spend hours formatting questions. Now I can set up a full test in less than 10 minutes. My students love the simple link-sharing feature."
+          "headline": "Management made effortless",
+          "quote": "Before Ilmly, we juggled between spreadsheets and Telegram groups. Now everything works seamlessly in one place."
         },
         {
           "author": {
-            "name": "Doston Nabotov",
-            "avatar": "/assets/images/testimonials/doston-nabotov.png",
-            "position": "Full-Stack Developer",
-            "company": "Microsoft"
+            "name": "Jasurbek Sayfullayev",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Founder",
+            "company": "SmartKids Center"
           },
-          "quote": "The clean interface makes it super easy to create even complex test structures. It feels like the tool was built by teachers, for teachers."
+          "headline": "Helped us scale faster",
+          "quote": "Automating payments and reports saved us hours every week. We finally focus more on students than admin work."
         },
         {
           "author": {
-            "name": "Mirfayz Ashurov",
-            "avatar": "/assets/images/testimonials/mirfayz-ashurov.png",
-            "position": "Project Manager",
-            "company": "Mir2Dos"
+            "name": "Dilshod Shukrullayev",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Manager",
+            "company": "IELTS Club"
           },
-          "quote": "We use it in our organization to quickly evaluate candidates. The ability to set private or paid tests gives us total flexibility."
+          "headline": "Excellent customer support",
+          "quote": "They quickly customized a few features for us. Feels like we have an extra teammate who actually cares."
+        },
+        {
+          "author": {
+            "name": "Malika Rakhmatova",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Administrator",
+            "company": "Future Skills Academy"
+          },
+          "headline": "Simple yet powerful",
+          "quote": "Our teachers picked it up instantly. Managing attendance and schedules is now effortless and even fun."
+        },
+        {
+          "author": {
+            "name": "Ulugbek Karimov",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Founder",
+            "company": "Young Coders"
+          },
+          "headline": "Students love it too",
+          "quote": "Parents can track progress, teachers can share updates — it just brings everyone on the same page."
+        },
+        {
+          "author": {
+            "name": "Farangiz Ibrokhimova",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Coordinator",
+            "company": "NextGen Education"
+          },
+          "headline": "Worth every penny",
+          "quote": "The Pro plan features are perfect for our size. Invoices, reminders, and reports all just… work."
         }
       ]
     },
-    "SocialSection": {
-      "title": "Want to stay updated?",
-      "desc": "Follow us for tips, updates, and news about upcoming features.",
-      "instagram": "Follow on Instagram",
-      "telegram": "Join on Telegram"
+    "CTA": {
+      "title": "Get started with Ilmly",
+      "subtitle": "Let technology handle the boring stuff so you can focus on teaching.",
+      "cta_primary": "Sign up for free",
+      "cta_secondary": "Contact us"
+    },
+    "Footer": {
+      "title": "Ilmly",
+      "desc": "All-in-one management platform for your learning center.",
+      "nav": [
+        {
+          "title": "Links",
+          "links": [
+            { "label": "Features", "url": "/features" },
+            { "label": "Pricing", "url": "/pricing" },
+            { "label": "Sign up", "url": "/sign-up" },
+            { "label": "Log in", "url": "/log-in" }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            { "label": "News", "url": "#" },
+            { "label": "FAQs", "url": "#" },
+            { "label": "Guides", "url": "#" }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "label": "About us", "url": "#" },
+            { "label": "Careers", "url": "#" },
+            { "label": "Contact us", "url": "#" },
+            { "label": "Privacy Policy", "url": "#" },
+            { "label": "Terms of service", "url": "#" }
+          ]
+        }
+      ]
     }
   },
   "LocaleSwitcher": {

@@ -1,42 +1,29 @@
-import { Check } from "lucide-react";
+import { CircleCheckIcon, CrownIcon } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "./card";
 import { Button } from "./button";
 import { Link } from "@/i18n/navigation";
-import Ribbon from "./ribbon";
-
-type TIER_TYPE = {
-  type: string;
-  price: number | string;
-  features: string[];
-  cta: string;
-  popular?: boolean;
-};
+import type { PricingItemType } from "@/lib/types";
 
 interface PricingItemProps {
-  item: TIER_TYPE;
+  item: PricingItemType;
 }
 
 export default function PricingItem({ item }: PricingItemProps) {
-  const popularClassNames = item.popular ? "border-accent border-2" : "";
-
   return (
     <li>
-      <Card
-        className={`bg-secondary-dark text-foreground-dark border-border-dark text-center ${popularClassNames} relative overflow-hidden`}
-      >
-        {item.popular ? <Ribbon>Most popular</Ribbon> : null}
-        <CardHeader className="space-y-4 pt-4">
-          <h3 className="text-2xl font-semibold">{item.type}</h3>
-          <p className="text-5xl font-bold">{item.price}</p>
+      <Card>
+        <CardHeader className="space-y-4 pt-4 text-center">
+          <h3 className="inline-flex items-center justify-center gap-2 text-2xl font-semibold">
+            {item.popular ? <CrownIcon /> : null}
+            {item.type}
+          </h3>
+          <p className="text-3xl font-bold md:text-6xl">{item.price}</p>
         </CardHeader>
         <CardContent>
-          <ul className="text-secondary-foreground-dark space-y-4">
+          <ul className="text-secondary-foreground mx-auto w-fit space-y-4">
             {item.features.map((feature) => (
-              <li
-                key={feature}
-                className="mx-auto flex w-fit items-center gap-2"
-              >
-                <Check size={16}></Check>
+              <li key={feature} className="flex items-center gap-2">
+                <CircleCheckIcon size={16}></CircleCheckIcon>
                 {feature}
               </li>
             ))}

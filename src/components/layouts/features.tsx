@@ -1,8 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Blocks, SquareCheckBig, Wallet } from "lucide-react";
 
+import type { FeatureItemType } from "@/lib/types";
 import {
   Section,
   SectionContent,
@@ -13,31 +13,14 @@ import FeatureItem from "@/components/ui/feature-item";
 
 export default function Features() {
   const t = useTranslations("HomePage.FeaturesSection");
-
-  const features = [
-    {
-      icon: <Blocks size={30} />,
-      title: t("features.0.title"),
-      desc: t("features.0.desc"),
-    },
-    {
-      icon: <SquareCheckBig size={30} />,
-      title: t("features.1.title"),
-      desc: t("features.1.desc"),
-    },
-    {
-      icon: <Wallet size={30} />,
-      title: t("features.2.title"),
-      desc: t("features.2.desc"),
-    },
-  ];
+  const features = t.raw("features") as Array<FeatureItemType>;
 
   return (
     <Section>
-      <SectionWrapper className="wrapper-sm space-y-16">
+      <SectionWrapper className="wrapper">
         <SectionTitle>{t("sectionTitle")}</SectionTitle>
         <SectionContent>
-          <ul className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-4 md:grid-cols-4">
             {features.map((item) => (
               <FeatureItem key={item.title} item={item} />
             ))}

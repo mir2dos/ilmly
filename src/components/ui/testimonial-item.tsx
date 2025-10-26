@@ -1,31 +1,34 @@
 import Image from "next/image";
 
-import type { TestimonialType } from "@/types";
+import type { TestimonialItemType } from "@/lib/types";
 
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 
 interface TestimonialItemProps {
-  item: TestimonialType;
-  idx: number;
+  item: TestimonialItemType;
 }
 
-export default function TestimonialItem({ item, idx }: TestimonialItemProps) {
-  const rotateDegree = idx % 2 === 0 ? "rotate-2" : "-rotate-2";
-
+export default function TestimonialItem({ item }: TestimonialItemProps) {
   return (
-    <li className={`${rotateDegree}`}>
-      <Card>
-        <CardContent className="">{item.quote}</CardContent>
-        <CardFooter className="flex items-center gap-4">
-          <Image src={item.author.avatar} alt="" width={60} height={60} />
-          <div className="space-y-2">
-            <p className="font-bold">{item.author.name}</p>
-            <p>
-              {item.author.position} @ {item.author.company}
-            </p>
-          </div>
-        </CardFooter>
-      </Card>
-    </li>
+    <Card className="mx-3 max-w-lg">
+      <CardHeader>
+        <p className="text-2xl font-bold">“{item.headline}”</p>
+      </CardHeader>
+      <CardContent>{item.quote}</CardContent>
+      <CardFooter className="flex items-center gap-4">
+        <Image src={item.author.avatar} alt="" width={60} height={60} />
+        <div className="space-y-2">
+          <p className="font-bold">{item.author.name}</p>
+          <p>
+            {item.author.position} @ {item.author.company}
+          </p>
+        </div>
+      </CardFooter>
+    </Card>
   );
 }

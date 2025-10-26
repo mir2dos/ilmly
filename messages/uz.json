@@ -1,126 +1,221 @@
 {
   "HomePage": {
     "Header": {
-      "nav": {
-        "home": "Bosh sahifa",
-        "about": "Haqida",
-        "tests": "Testlar",
-        "pricing": "Narxlar",
-        "contact": "Aloqa",
-        "cta": "Boshlash"
-      }
+      "links": [
+        { "label": "Bosh sahifa", "url": "#" },
+        { "label": "Biz haqimizda", "url": "#" },
+        { "label": "Xususiyatlar", "url": "#" },
+        { "label": "Narxlar", "url": "#" },
+        { "label": "Aloqa", "url": "#" }
+      ],
+      "ctaPrimary": "Ro‘yxatdan o‘tish",
+      "ctaSecondary": "Kirish"
     },
     "HeroSection": {
-      "title": "Testlarni <span class='gradient-text'>Yaratish va Ulashish</span>ning Eng Oson Yo‘li",
-      "desc": "Bir necha daqiqada test tuzing, oddiy havola bilan o‘quvchilaringizga yuboring va natijalarni darhol ko‘ring. O‘qituvchilar, mentorlar va tashkilotlar uchun qulay yechim.",
-      "ctaPrimary": "Test yaratish",
-      "ctaSecondary": "Narxlarni ko‘rish"
+      "title": "O‘quv markazingizni boshqarishning eng oson yo‘li",
+      "desc": "Markazingizni boshqarish uchun kerak bo‘lgan hamma narsa — barchasi bir joyda.",
+      "ctaPrimary": "Boshlash",
+      "ctaSecondary": "Demoni ko‘rish"
     },
-    "SingleFeature": [
-      {
-        "title": "Testlarni bir necha soniyada yarating",
-        "desc": "Variantli savollardan tortib inshogacha – istalgan formatni aralashtirib tuzishingiz mumkin. Hech qanday murakkab sozlamalar yo‘q — savollaringizni yozing, sozlang va jonli qiling.",
-        "cta": "Namunalarni ko‘rish"
-      },
-      {
-        "title": "Bir marta bosish bilan chop eting",
-        "desc": "Testni ommaviy, shaxsiy yoki pullik qilish sizning ixtiyoringizda. Qarorni qabul qiling va bir marta bosing — test tayyor!",
-        "cta": "Demoni ko‘rish"
-      }
-    ],
     "FeaturesSection": {
-      "sectionTitle": "Nega O‘qituvchilar Bizni Tanlashadi",
+      "sectionTitle": "Muammo",
       "features": [
         {
-          "title": "To‘liq moslashtiriladi",
-          "desc": "Savollar tartibi, turi, vaqti va kirish huquqini o‘zingiz belgilaysiz. Test – sizniki, qoidalar – sizniki."
+          "icon": "shapes",
+          "title": "Tartibsiz vositalar",
+          "desc": "Har bir vazifa uchun boshqa ilova kerak"
         },
         {
-          "title": "Juda oson foydalaniladi",
-          "desc": "Soddalashtirilgan interfeys tufayli vaqtni dasturda emas, balki o‘qitishda sarflaysiz."
+          "icon": "message-circle-off",
+          "title": "Sust aloqa",
+          "desc": "Xabarlar chat guruhlarda yo‘qoladi"
         },
         {
-          "title": "Daromad toping",
-          "desc": "Bilimingizni pulli testlar orqali daromadga aylantiring."
+          "icon": "notebook-pen",
+          "title": "Qo‘lda bajariladigan ishlar",
+          "desc": "Takroriy ishlar vaqtni oladi"
+        },
+        {
+          "icon": "trending-down",
+          "title": "Tahlil yo‘q",
+          "desc": "O‘sish va natijani kuzatish qiyin"
         }
       ]
     },
     "PricingSection": {
-      "sectionTitle": "Oddiy Narxlar",
+      "sectionTitle": "Tariflar",
       "tiers": [
         {
-          "type": "Basic",
+          "type": "Bepul",
           "price": "Bepul",
           "features": [
-            "Shaxsiy panel",
-            "10 ta ochiq test",
-            "5 ta yopiq test",
-            "5 ta savol turi"
+            "10 tagacha o‘quvchi",
+            "Asosiy dars boshqaruvi",
+            "Davomatni kuzatish",
+            "Eslatmalar va e’lonlar",
+            "Cheklangan hisobotlar",
+            "Email orqali yordam"
           ],
-          "cta": "Boshlash"
+          "cta": "Bepul tarifni tanlash"
         },
         {
           "type": "Pro",
-          "price": "Oyiga $2",
+          "price": "Oyiga $5",
           "features": [
-            "Basic’dagi hamma imkoniyatlar",
-            "Cheksiz testlar",
-            "Testni monetizatsiya qilish",
-            "25 ta savol turi"
+            "Bepul tarifdagi hamma imkoniyatlar",
+            "Cheksiz o‘quvchi va guruhlar",
+            "Kengaytirilgan tahlillar",
+            "Avtomatik hisob-fakturalar",
+            "Moslashtiriladigan jadval",
+            "Ustuvor yordam"
           ],
-          "cta": "Boshlash",
+          "cta": "Pro tarifni tanlash",
           "popular": true
         },
         {
-          "type": "Enterprise",
-          "price": "Kelishilgan",
+          "type": "Korporativ",
+          "price": "So‘rov bo‘yicha",
           "features": [
-            "Pro’dagi hamma imkoniyatlar",
-            "Shaxsiy domen",
-            "O‘ziga xos savol turlari",
-            "24/7 qo‘llab-quvvatlash"
+            "Pro tarifdagi hamma imkoniyatlar",
+            "Shaxsiy menejer",
+            "Oq yorliq brendingi",
+            "Maxsus integratsiyalar",
+            "O‘qitish va yo‘lga qo‘yish",
+            "24/7 texnik yordam"
           ],
-          "cta": "Biz bilan bog‘laning"
+          "cta": "Biz bilan bog‘lanish"
+        }
+      ]
+    },
+    "DemoSection": {
+      "sectionTitle": "Siz dars bering — biz qolganini hal qilamiz",
+      "cta": "Boshlash"
+    },
+    "FAQsSection": {
+      "sectionTitle": "Ko‘p so‘raladigan savollar",
+      "sectionDesc": "Savolingiz bormi? Quyida eng ko‘p beriladigan savollarga javoblar mavjud.",
+      "faqs": [
+        {
+          "question": "Qo‘shimcha texnik sozlamalar kerakmi?",
+          "answer": "Yo‘q. Platformamizdan foydalanish juda oson."
+        },
+        {
+          "question": "Bir nechta o‘qituvchi bitta akkauntdan foydalansa bo‘ladimi?",
+          "answer": "Ha, bitta akkauntni 3 tagacha o‘qituvchi ishlatishi mumkin."
+        },
+        {
+          "question": "Platforma o‘zbek tilida bormi?",
+          "answer": "Ha, interfeys to‘liq o‘zbek tilida ishlaydi."
+        },
+        {
+          "question": "Platformadan bepul foydalansam bo‘ladimi?",
+          "answer": "Albatta! Siz bepul boshlashingiz va xohlasangiz Pro rejaga o‘tishingiz mumkin."
         }
       ]
     },
     "TestimonialsSection": {
-      "sectionTitle": "Foydalanuvchilar Fikri",
+      "sectionTitle": "Foydalanuvchilarimiz fikri",
       "testimonials": [
         {
           "author": {
-            "name": "Mirfayz Sayfullayev",
-            "avatar": "/assets/images/testimonials/mirfayz-sayfullayev.png",
-            "position": "Grafik Dizayner",
-            "company": "Ibrat Ta'lim"
+            "name": "Shuhrat Mansurov",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Direktor",
+            "company": "EduZone markazi"
           },
-          "quote": "Avvallari testlarni formatlashga soatlar ketardi. Endi esa 10 daqiqada to‘liq test tayyorlayman. O‘quvchilarim oddiy havola orqali oson kirishidan juda xursand."
+          "headline": "Boshqaruv endi juda oson",
+          "quote": "Ilmlydan oldin biz fayllar va Telegram guruhlarida adashardik. Endi hammasi bir joyda, muammosiz ishlaydi."
         },
         {
           "author": {
-            "name": "Doston Nabotov",
-            "avatar": "/assets/images/testimonials/doston-nabotov.png",
-            "position": "Full-Stack Dasturchi",
-            "company": "Microsoft"
+            "name": "Jasurbek Sayfullayev",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Asoschi",
+            "company": "SmartKids markazi"
           },
-          "quote": "Soddalashtirilgan interfeys tufayli hatto murakkab testlarni ham bemalol yaratish mumkin. Haqiqatan ham o‘qituvchilar uchun yaratilgan dastur."
+          "headline": "Tezroq rivojlanishga yordam berdi",
+          "quote": "To‘lovlar va hisobotlar avtomatlashtirilgan — haftasiga soatlab vaqt tejamiz. Endi faqat o‘quvchilarga e’tibor qaratamiz."
         },
         {
           "author": {
-            "name": "Mirfayz Ashurov",
-            "avatar": "/assets/images/testimonials/mirfayz-ashurov.png",
-            "position": "Loyiha Menejeri",
-            "company": "Mir2Dos"
+            "name": "Dilshod Shukrullayev",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Menejer",
+            "company": "IELTS Club"
           },
-          "quote": "Biz uni nomzodlarni tezkor baholash uchun ishlatamiz. Shaxsiy yoki pullik test qilish imkoniyati bizga to‘liq moslashuvchanlik beradi."
+          "headline": "Yordam jamoasi a’lo darajada",
+          "quote": "Bizga kerakli funksiyalarni tezda qo‘shishdi. Go‘yo o‘z jamoamizda yana bir a’zo paydo bo‘lgandek."
+        },
+        {
+          "author": {
+            "name": "Malika Rahmatova",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Administrator",
+            "company": "Future Skills Academy"
+          },
+          "headline": "Oddiy, lekin qudratli platforma",
+          "quote": "O‘qituvchilarimiz bir kunda o‘rganishdi. Davomat va jadvalni yuritish endi juda qulay."
+        },
+        {
+          "author": {
+            "name": "Ulug‘bek Karimov",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Asoschi",
+            "company": "Young Coders"
+          },
+          "headline": "O‘quvchilar ham yoqtirishdi",
+          "quote": "Ota-onalar farzandlari yutuqlarini kuzatishadi, o‘qituvchilar yangiliklarni ulashadi — hamma bir tizimda."
+        },
+        {
+          "author": {
+            "name": "Farangiz Ibrohimova",
+            "avatar": "/assets/images/testimonials/default.png",
+            "position": "Koordinator",
+            "company": "NextGen Education"
+          },
+          "headline": "Har bir tiyiniga arziydi",
+          "quote": "Pro rejadagi funksiyalar biz uchun ideal. Hisob-fakturalar, eslatmalar va hisobotlar avtomatik ishlaydi."
         }
       ]
     },
-    "SocialSection": {
-      "title": "Yangiliklardan xabardor bo‘ling",
-      "desc": "Yangiliklar, maslahatlar va yangi funksiyalar haqida bizni kuzatib boring.",
-      "instagram": "Instagram’da kuzatish",
-      "telegram": "Telegram kanaliga qo‘shilish"
+    "CTA": {
+      "title": "Ilmly bilan boshlang",
+      "subtitle": "Biz texnik ishlarni bajaramiz, siz esa darslarga e’tibor qarating.",
+      "cta_primary": "Bepul boshlash",
+      "cta_secondary": "Biz bilan bog‘lanish"
+    },
+    "Footer": {
+      "title": "Ilmly",
+      "desc": "O‘quv markazlari uchun yagona boshqaruv platformasi.",
+      "nav": [
+        {
+          "title": "Bo‘limlar",
+          "links": [
+            { "label": "Xususiyatlar", "url": "/features" },
+            { "label": "Narxlar", "url": "/pricing" },
+            { "label": "Ro‘yxatdan o‘tish", "url": "/sign-up" },
+            { "label": "Kirish", "url": "/log-in" }
+          ]
+        },
+        {
+          "title": "Resurslar",
+          "links": [
+            { "label": "Yangiliklar", "url": "#" },
+            { "label": "Savollar", "url": "#" },
+            { "label": "Qo‘llanmalar", "url": "#" }
+          ]
+        },
+        {
+          "title": "Kompaniya",
+          "links": [
+            { "label": "Biz haqimizda", "url": "#" },
+            { "label": "Karyera", "url": "#" },
+            { "label": "Aloqa", "url": "#" },
+            { "label": "Maxfiylik siyosati", "url": "#" },
+            { "label": "Foydalanish shartlari", "url": "#" }
+          ]
+        }
+      ]
     }
   },
   "LocaleSwitcher": {
