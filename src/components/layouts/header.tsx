@@ -24,6 +24,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { PLATFORM_URL } from "@/lib/constants";
 
 export default function Header() {
   const t = useTranslations("HomePage.Header");
@@ -63,21 +64,24 @@ export default function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuLabel>Change Language</DropdownMenuLabel>
-              <DropdownMenuSeparator />
               <DropdownMenuItem>
                 <LocaleSwitch />
               </DropdownMenuItem>
-              <DropdownMenuLabel>Change theme</DropdownMenuLabel>
               <DropdownMenuSeparator />
+              <DropdownMenuLabel>Change theme</DropdownMenuLabel>
               <DropdownMenuItem>Coming soon...</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
           <Button variant="secondary" asChild>
-            <Link href="/new">{t("ctaSecondary")}</Link>
+            <Link href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">
+              {t("ctaSecondary")}
+            </Link>
           </Button>
           <Button variant="accent" asChild>
-            <Link href="/new">{t("ctaPrimary")}</Link>
+            <Link href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">
+              {t("ctaPrimary")}
+            </Link>
           </Button>
         </div>
       </div>

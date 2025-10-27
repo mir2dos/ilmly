@@ -193,8 +193,8 @@
           "links": [
             { "label": "Features", "url": "/features" },
             { "label": "Pricing", "url": "/pricing" },
-            { "label": "Sign up", "url": "/sign-up" },
-            { "label": "Log in", "url": "/log-in" }
+            { "label": "Sign up", "url": "https://admin.ilmlyai.uz" },
+            { "label": "Log in", "url": "https://admin.ilmlyai.uz" }
           ]
         },
         {
