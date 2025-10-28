@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_DESC, SITE_TITLE } from "@/lib/constants";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const sourceSans = Source_Sans_3({
   variable: "--font-source-sans",
@@ -31,9 +32,18 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
-      <body className={`${sourceSans.variable} dark antialiased`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+    <html lang={locale} suppressHydrationWarning>
+      <body className={`${sourceSans.variable} antialiased`}>
+        <NextIntlClientProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
         <Analytics />
       </body>
     </html>

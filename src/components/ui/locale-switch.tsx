@@ -3,26 +3,29 @@
 import { Locale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { useTransition } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./select";
 import { useParams } from "next/navigation";
 import { useLocale, useTranslations } from "use-intl";
 import { routing } from "@/i18n/routing";
 
+import {
+  DropdownMenuPortal,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+} from "./dropdown-menu";
+import { LanguagesIcon } from "lucide-react";
+
 export default function LocaleSwitch() {
-  const t = useTranslations("LocaleSwitcher");
+  const t = useTranslations("Settings.LocaleSwitcher");
   const locale = useLocale();
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
 
-  function onSelectChange(value: string) {
+  function handleLocalChange(value: string) {
     const nextLocale = value as Locale;
     startTransition(() => {
       router.replace(
@@ -36,21 +39,27 @@ export default function LocaleSwitch() {
   }
 
   return (
-    <Select
-      defaultValue={locale}
-      onValueChange={onSelectChange}
-      disabled={isPending}
-    >
-      <SelectTrigger className="border-secondary-dark w-[150px] border-2">
-        <SelectValue placeholder="Language" />
-      </SelectTrigger>
-      <SelectContent>
-        {routing.locales.map((cur) => (
-          <SelectItem key={cur} value={cur}>
-            {t("locale", { locale: cur })}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
+    <>
+      <DropdownMenuSub>
+        <DropdownMenuSubTrigger>
+          <LanguagesIcon /> Change language
+        </DropdownMenuSubTrigger>
+        <DropdownMenuPortal>
+          <DropdownMenuSubContent>
+            <DropdownMenuRadioGroup
+              value={locale}
+              onValueChange={handleLocalChange}
+              aria-disabled={isPending}
+            >
+              {routing.locales.map((cur) => (
+                <DropdownMenuRadioItem key={cur} value={cur}>
+                  {t("locale", { locale: cur })}
+                </DropdownMenuRadioItem>
+              ))}
+            </DropdownMenuRadioGroup>
+          </DropdownMenuSubContent>
+        </DropdownMenuPortal>
+      </DropdownMenuSub>
+    </>
   );
 }

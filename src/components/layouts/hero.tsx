@@ -33,7 +33,7 @@ export default function Hero() {
           </Button>
           <AspectRatio
             ratio={16 / 9}
-            className="mx-auto my-12 w-5xl overflow-hidden rounded-xl border-4 border-[#5C78D5] shadow-[0_-20px_100px_10px_rgba(92,120,213,0.3)]"
+            className="border-border mx-auto my-12 w-5xl overflow-hidden rounded-xl border-4 shadow-[0_-20px_100px_10px_rgba(92,120,213,0.3)]"
           >
             <Image
               src="/assets/images/dashboard.png"

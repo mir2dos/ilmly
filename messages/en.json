@@ -218,8 +218,14 @@
       ]
     }
   },
-  "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, uz {🇺🇿 Uzbek} en {🇺🇸 English} ru {🇷🇺 Russian} other {Unknown}}"
+  "Settings": {
+    "LocaleSwitcher": {
+      "label": "Change language",
+      "locale": "{locale, select, en {🇺🇸 English} uz {🇺🇿 O‘zbekcha} ru {🇷🇺 Русский} other {Unknown}}"
+    },
+    "ThemeSwitcher": {
+      "label": "Change theme",
+      "theme": "{theme, select, dark {Dark} light {Light} other {Unknown}}"
+    }
   }
 }

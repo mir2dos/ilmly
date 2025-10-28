@@ -11,20 +11,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import LocaleSwitch from "../ui/locale-switch";
 import type { LinkType } from "@/lib/types";
 import { Button } from "../ui/button";
-import { SettingsIcon } from "lucide-react";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { PLATFORM_URL } from "@/lib/constants";
+import Settings from "../ui/settings";
 
 export default function Header() {
   const t = useTranslations("HomePage.Header");
@@ -56,22 +46,7 @@ export default function Header() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex items-center gap-2">
-          <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Button variant="secondary" size="icon">
-                <SettingsIcon />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuLabel>Change Language</DropdownMenuLabel>
-              <DropdownMenuItem>
-                <LocaleSwitch />
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuLabel>Change theme</DropdownMenuLabel>
-              <DropdownMenuItem>Coming soon...</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Settings />
 
           <Button variant="secondary" asChild>
             <Link href={PLATFORM_URL} target="_blank" rel="noopener noreferrer">

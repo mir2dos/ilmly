@@ -218,8 +218,14 @@
       ]
     }
   },
-  "LocaleSwitcher": {
-    "label": "Tilni o‘zgartirish",
-    "locale": "{locale, select, uz {🇺🇿 O‘zbekcha} en {🇺🇸 Inglizcha} ru {🇷🇺 Ruscha} other {Noma’lum}}"
+  "Settings": {
+    "LocaleSwitcher": {
+      "label": "Tilni o‘zgartirish",
+      "locale": "{locale, select, en {🇺🇸 English} uz {🇺🇿 O‘zbekcha} ru {🇷🇺 Русский} other {Noma’lum}}"
+    },
+    "ThemeSwitcher": {
+      "label": "Ko‘rinishni o‘zgartirish",
+      "theme": "{theme, select, dark {Tungi} light {Kunduzgi} other {Noma’lum}}"
+    }
   }
 }
