@@ -2,11 +2,26 @@
   "HomePage": {
     "Header": {
       "links": [
-        { "label": "Bosh sahifa", "url": "#" },
-        { "label": "Biz haqimizda", "url": "#" },
-        { "label": "Xususiyatlar", "url": "#" },
-        { "label": "Narxlar", "url": "#" },
-        { "label": "Aloqa", "url": "#" }
+        {
+          "label": "Bosh sahifa",
+          "url": "#"
+        },
+        {
+          "label": "Biz haqimizda",
+          "url": "#"
+        },
+        {
+          "label": "Xususiyatlar",
+          "url": "#"
+        },
+        {
+          "label": "Narxlar",
+          "url": "#"
+        },
+        {
+          "label": "Aloqa",
+          "url": "#"
+        }
       ],
       "ctaPrimary": "Ro‘yxatdan o‘tish",
       "ctaSecondary": "Kirish"
@@ -191,35 +206,77 @@
         {
           "title": "Bo‘limlar",
           "links": [
-            { "label": "Xususiyatlar", "url": "/features" },
-            { "label": "Narxlar", "url": "/pricing" },
-            { "label": "Ro‘yxatdan o‘tish", "url": "/sign-up" },
-            { "label": "Kirish", "url": "/log-in" }
+            {
+              "label": "Xususiyatlar",
+              "url": "/features"
+            },
+            {
+              "label": "Narxlar",
+              "url": "/pricing"
+            },
+            {
+              "label": "Ro‘yxatdan o‘tish",
+              "url": "/sign-up"
+            },
+            {
+              "label": "Kirish",
+              "url": "/log-in"
+            }
           ]
         },
         {
           "title": "Resurslar",
           "links": [
-            { "label": "Yangiliklar", "url": "#" },
-            { "label": "Savollar", "url": "#" },
-            { "label": "Qo‘llanmalar", "url": "#" }
+            {
+              "label": "Yangiliklar",
+              "url": "#"
+            },
+            {
+              "label": "Savollar",
+              "url": "#"
+            },
+            {
+              "label": "Qo‘llanmalar",
+              "url": "#"
+            }
           ]
         },
         {
           "title": "Kompaniya",
           "links": [
-            { "label": "Biz haqimizda", "url": "#" },
-            { "label": "Karyera", "url": "#" },
-            { "label": "Aloqa", "url": "#" },
-            { "label": "Maxfiylik siyosati", "url": "#" },
-            { "label": "Foydalanish shartlari", "url": "#" }
+            {
+              "label": "Biz haqimizda",
+              "url": "#"
+            },
+            {
+              "label": "Karyera",
+              "url": "#"
+            },
+            {
+              "label": "Aloqa",
+              "url": "#"
+            },
+            {
+              "label": "Maxfiylik siyosati",
+              "url": "#"
+            },
+            {
+              "label": "Foydalanish shartlari",
+              "url": "#"
+            }
           ]
         }
       ]
     }
   },
-  "LocaleSwitcher": {
-    "label": "Tilni o‘zgartirish",
-    "locale": "{locale, select, uz {🇺🇿 O‘zbekcha} en {🇺🇸 Inglizcha} ru {🇷🇺 Ruscha} other {Noma’lum}}"
+  "Settings": {
+    "LocaleSwitcher": {
+      "label": "Tilni o‘zgartirish",
+      "locale": "{locale, select, en {🇺🇸 English} uz {🇺🇿 O‘zbekcha} ru {🇷🇺 Русский} other {Noma’lum}}"
+    },
+    "ThemeSwitcher": {
+      "label": "Ko‘rinishni o‘zgartirish",
+      "theme": "{theme, select, dark {Tungi} light {Kunduzgi} other {Noma’lum}}"
+    }
   }
 }
