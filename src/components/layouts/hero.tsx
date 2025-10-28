@@ -31,17 +31,19 @@ export default function Hero() {
               {t("ctaPrimary")} <ArrowRightIcon />
             </Link>
           </Button>
-          <AspectRatio
-            ratio={16 / 9}
-            className="border-border mx-auto my-12 w-5xl overflow-hidden rounded-xl border-4 shadow-[0_-20px_100px_10px_rgba(92,120,213,0.3)]"
-          >
-            <Image
-              src="/assets/images/dashboard.png"
-              alt="Dashboard view"
-              fill
-              className="h-full w-full object-cover dark:grayscale"
-            />
-          </AspectRatio>
+          <div className="mx-auto my-12 w-full max-w-5xl">
+            <AspectRatio
+              ratio={16 / 10}
+              className="border-border overflow-hidden rounded-xl border-4 shadow-[0_-20px_100px_10px_rgba(92,120,213,0.3)]"
+            >
+              <Image
+                src="/assets/images/dashboard.png"
+                alt="Dashboard view"
+                fill
+                className="h-full w-full object-cover"
+              />
+            </AspectRatio>
+          </div>
         </SectionContent>
       </SectionWrapper>
     </Section>

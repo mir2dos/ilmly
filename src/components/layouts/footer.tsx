@@ -2,7 +2,7 @@
 
 import { SectionContent, SectionWrapper } from "@/components/layouts/section";
 
-import Logo from "@/components/ui/logo";
+import { ThemeAdaptiveLogo } from "@/components/ui/logo";
 import { useTranslations } from "next-intl";
 import type { LinkType } from "@/lib/types";
 import { Link } from "@/i18n/navigation";
@@ -22,7 +22,7 @@ export default function Footer() {
       <SectionWrapper>
         <SectionContent className="grid gap-4 md:grid-cols-[2fr_1fr_1fr_1fr] md:gap-14">
           <div className="space-y-4">
-            <Logo variant="8" />
+            <ThemeAdaptiveLogo />
             <p className="max-w-[28ch]">{t("desc")}</p>
             <p>© 2025 Mir2Dos</p>
             <SocialLinks />
