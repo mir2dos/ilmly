@@ -19,7 +19,7 @@ export default function Features() {
   const features = t.raw("features") as Array<FeatureItemType>;
 
   return (
-    <Section>
+    <Section id="features" className="md:py-20">
       <SectionWrapper className="wrapper">
         <SectionTitle>{t("sectionTitle")}</SectionTitle>
         <SectionContent>
