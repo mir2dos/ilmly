@@ -6,6 +6,7 @@ import Footer from "@/components/layouts/footer";
 import Header from "@/components/layouts/header";
 import Hero from "@/components/layouts/hero";
 import Pricing from "@/components/layouts/pricing";
+import Problems from "@/components/layouts/problems";
 import Testimonials from "@/components/layouts/testimonials";
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
     <>
       <Header />
       <Hero />
+      <Problems />
       <Features />
       <Demo />
       <Pricing />

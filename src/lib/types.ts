@@ -9,10 +9,17 @@ export type TestimonialItemType = {
   quote: string;
 };
 
+export type ProblemItemType = {
+  icon: string;
+  title: string;
+  desc: string;
+};
+
 export type FeatureItemType = {
   icon: string;
   title: string;
   desc: string;
+  image: string;
 };
 
 export type LinkType = {
