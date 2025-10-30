@@ -17,9 +17,9 @@
       "ctaPrimary": "Get Started",
       "ctaSecondary": "See demo"
     },
-    "FeaturesSection": {
+    "ProblemsSection": {
       "sectionTitle": "The Problem",
-      "features": [
+      "problems": [
         {
           "icon": "shapes",
           "title": "Scattered tools",
@@ -39,6 +39,35 @@
           "icon": "trending-down",
           "title": "Lack of insights",
           "desc": "No clear data or growth tracking"
+        }
+      ]
+    },
+    "FeaturesSection": {
+      "sectionTitle": "Everything you need, all in one place",
+      "features": [
+        {
+          "icon": "users",
+          "title": "Manage with ease",
+          "desc": "Students, staff, classes",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "clipboard-list",
+          "title": "Track everything",
+          "desc": "Attendance, payments, analytics",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "message-circle",
+          "title": "Stay connected",
+          "desc": "Messages, announcements, reminders",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "chart-column",
+          "title": "Automate tasks",
+          "desc": "Reports, schedules, invoices",
+          "image": "/assets/images/dashboard.png"
         }
       ]
     },
