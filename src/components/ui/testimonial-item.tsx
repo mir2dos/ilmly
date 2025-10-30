@@ -15,14 +15,14 @@ interface TestimonialItemProps {
 
 export default function TestimonialItem({ item }: TestimonialItemProps) {
   return (
-    <Card className="mx-3 max-w-lg">
+    <Card className="mx-3 max-w-96 md:max-w-lg">
       <CardHeader>
         <p className="text-2xl font-bold">“{item.headline}”</p>
       </CardHeader>
       <CardContent>{item.quote}</CardContent>
       <CardFooter className="flex items-center gap-4">
         <Image src={item.author.avatar} alt="" width={60} height={60} />
-        <div className="space-y-2">
+        <div className="space-y-1">
           <p className="font-bold">{item.author.name}</p>
           <p>
             {item.author.position} @ {item.author.company}

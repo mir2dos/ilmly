@@ -25,7 +25,7 @@ export default function Testimonials() {
       <SectionWrapper className="wrapper-full">
         <SectionTitle>{t("sectionTitle")}</SectionTitle>
         <SectionContent className="space-y-6">
-          <Marquee speed={25} autoFill>
+          <Marquee speed={25}>
             {testimonials.slice(0, median).map((item) => (
               <TestimonialItem key={item.author.name} item={item} />
             ))}

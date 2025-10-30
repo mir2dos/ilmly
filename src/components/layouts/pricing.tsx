@@ -22,8 +22,8 @@ export default function Pricing() {
         <SectionTitle>{t("sectionTitle")}</SectionTitle>
         <SectionContent>
           <ul className="grid gap-4 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
-            {tiers.map((item) => (
-              <PricingItem key={item.type} item={item} />
+            {tiers.map((tier) => (
+              <PricingItem key={tier.type} item={tier} />
             ))}
           </ul>
         </SectionContent>

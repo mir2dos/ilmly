@@ -20,7 +20,7 @@ export default function Problems() {
       <SectionWrapper className="wrapper">
         <SectionTitle>{t("sectionTitle")}</SectionTitle>
         <SectionContent>
-          <ul className="grid gap-4 md:grid-cols-4">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {problems.map((item) => (
               <ProblemItem key={item.title} item={item} />
             ))}
