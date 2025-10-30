@@ -32,9 +32,9 @@
       "ctaPrimary": "Начать",
       "ctaSecondary": "Посмотреть демо"
     },
-    "FeaturesSection": {
+    "ProblemsSection": {
       "sectionTitle": "Проблема",
-      "features": [
+      "problems": [
         {
           "icon": "shapes",
           "title": "Разрозненные инструменты",
@@ -54,6 +54,35 @@
           "icon": "trending-down",
           "title": "Отсутствие аналитики",
           "desc": "Нет ясных данных и отслеживания прогресса"
+        }
+      ]
+    },
+    "FeaturesSection": {
+      "sectionTitle": "Всё, что нужно — в одном месте",
+      "features": [
+        {
+          "icon": "users",
+          "title": "Управляйте с лёгкостью",
+          "desc": "Студенты, персонал, классы",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "clipboard-list",
+          "title": "Отслеживайте всё",
+          "desc": "Посещаемость, платежи, аналитика",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "message-circle",
+          "title": "Оставайтесь на связи",
+          "desc": "Сообщения, объявления, напоминания",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "chart-column",
+          "title": "Автоматизируйте задачи",
+          "desc": "Отчёты, расписания, счета",
+          "image": "/assets/images/dashboard.png"
         }
       ]
     },
