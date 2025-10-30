@@ -32,9 +32,9 @@
       "ctaPrimary": "Boshlash",
       "ctaSecondary": "Demoni ko‘rish"
     },
-    "FeaturesSection": {
+    "ProblemsSection": {
       "sectionTitle": "Muammo",
-      "features": [
+      "problems": [
         {
           "icon": "shapes",
           "title": "Tartibsiz vositalar",
@@ -54,6 +54,35 @@
           "icon": "trending-down",
           "title": "Tahlil yo‘q",
           "desc": "O‘sish va natijani kuzatish qiyin"
+        }
+      ]
+    },
+    "FeaturesSection": {
+      "sectionTitle": "Barcha kerakli narsalar — barchasi bir joyda",
+      "features": [
+        {
+          "icon": "users",
+          "title": "Oson boshqaruv",
+          "desc": "Talabalar, xodimlar, sinflar",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "clipboard-list",
+          "title": "Hammasini kuzating",
+          "desc": "Davomat, to‘lovlar, tahlillar",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "message-circle",
+          "title": "Aloqada bo‘ling",
+          "desc": "Xabarlar, e’lonlar, eslatmalar",
+          "image": "/assets/images/dashboard.png"
+        },
+        {
+          "icon": "chart-column",
+          "title": "Vazifalarni avtomatlashtiring",
+          "desc": "Hisobotlar, jadval, hisob-fakturalar",
+          "image": "/assets/images/dashboard.png"
         }
       ]
     },
